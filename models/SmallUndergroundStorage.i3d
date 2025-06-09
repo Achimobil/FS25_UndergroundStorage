@@ -111,10 +111,12 @@
           <Shape name="lowerPartShort" lockedgroup="true" translation="1.93 -1.62535e-26 1.91" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="5">
             <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="150" castsShadows="true" receiveShadows="true" materialIds="6"/>
           </Shape>
-          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.84 -1.62535e-26 1.75" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="151" castsShadows="true" receiveShadows="true" materialIds="5">
+          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.85 -2.94439e-26 9.89" rotation="9.25663e-26 0 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="151" castsShadows="true" receiveShadows="true" materialIds="5">
             <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="152" castsShadows="true" receiveShadows="true" materialIds="6"/>
           </Shape>
-          <Shape name="endElement02" lockedgroup="true" translation="-1.85 4.87563e-13 9.93" rotation="-2.81899e-12 -0 0" shapeId="8" static="true" clipDistance="300" nodeId="153" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.80753 -9.00266e-27 1.79" rotation="9.25663e-26 -90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="156" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="157" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          </Shape>
         </TransformGroup>
       </TransformGroup>
     </TransformGroup>
