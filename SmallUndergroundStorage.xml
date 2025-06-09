@@ -72,36 +72,36 @@
     
     <animatedObjects>
         <animatedObject saveId="aufzug">
-            <animation duration="10">
+            <animation duration="4">
                 <part node="movingPart">
                     <Keyframe time="0.0" translation="0 -2.376 0" rotation="0 0 0"/>
                     <Keyframe time="0.3" translation="0 0.015 0" rotation="0 0 0"/>
-                    <Keyframe time="0.7" translation="0 0.015 0" rotation="0 0 0"/>
-                    <Keyframe time="1.0" translation="0 -2.376 0" rotation="0 0 0"/>
+                    <!-- <Keyframe time="0.7" translation="0 0.015 0" rotation="0 0 0"/> -->
+                    <!-- <Keyframe time="1.0" translation="0 -2.376 0" rotation="0 0 0"/> -->
                 </part>
                 <part node="doorAngel.001">
                     <Keyframe time="0.3" translation="-1.505 -1.25 1.76" rotation="0 0 0"/>
                     <Keyframe time="0.4" translation="-1.505 -1.25 1.76" rotation="0 -90 0"/>
-                    <Keyframe time="0.6" translation="-1.505 -1.25 1.76" rotation="0 -90 0"/>
-                    <Keyframe time="0.7" translation="-1.505 -1.25 1.76" rotation="0 0 0"/>
+                    <!-- <Keyframe time="0.6" translation="-1.505 -1.25 1.76" rotation="0 -90 0"/> -->
+                    <!-- <Keyframe time="0.7" translation="-1.505 -1.25 1.76" rotation="0 0 0"/> -->
                 </part>
                 <part node="doorAngel.002">
                     <Keyframe time="0.3" translation="1.505 -1.25 1.76" rotation="0 0 0"/>
                     <Keyframe time="0.4" translation="1.505 -1.25 1.76" rotation="0 90 0"/>
-                    <Keyframe time="0.6" translation="1.505 -1.25 1.76" rotation="0 90 0"/>
-                    <Keyframe time="0.7" translation="1.505 -1.25 1.76" rotation="0 0 0"/>
+                    <!-- <Keyframe time="0.6" translation="1.505 -1.25 1.76" rotation="0 90 0"/> -->
+                    <!-- <Keyframe time="0.7" translation="1.505 -1.25 1.76" rotation="0 0 0"/> -->
                 </part>
                 <part node="doorAngel.003">
                     <Keyframe time="0.3" translation="-1.505 -1.25 -1.76" rotation="0 0 0"/>
                     <Keyframe time="0.4" translation="-1.505 -1.25 -1.76" rotation="0 90 0"/>
-                    <Keyframe time="0.6" translation="-1.505 -1.25 -1.76" rotation="0 90 0"/>
-                    <Keyframe time="0.7" translation="-1.505 -1.25 -1.76" rotation="0 0 0"/>
+                    <!-- <Keyframe time="0.6" translation="-1.505 -1.25 -1.76" rotation="0 90 0"/> -->
+                    <!-- <Keyframe time="0.7" translation="-1.505 -1.25 -1.76" rotation="0 0 0"/> -->
                 </part>
                 <part node="doorAngel.004">
                     <Keyframe time="0.3" translation="1.505 -1.25 -1.76" rotation="0 0 0"/>
                     <Keyframe time="0.4" translation="1.505 -1.25 -1.76" rotation="0 -90 0"/>
-                    <Keyframe time="0.6" translation="1.505 -1.25 -1.76" rotation="0 -90 0"/>
-                    <Keyframe time="0.7" translation="1.505 -1.25 -1.76" rotation="0 0 0"/>
+                    <!-- <Keyframe time="0.6" translation="1.505 -1.25 -1.76" rotation="0 -90 0"/> -->
+                    <!-- <Keyframe time="0.7" translation="1.505 -1.25 -1.76" rotation="0 0 0"/> -->
                 </part>
             </animation>
             <controls triggerNode="aufzugTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
