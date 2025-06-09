@@ -91,7 +91,7 @@
           <Shape name="stuetze.007" translation="1.68 0.0500001 -0.3" shapeId="10" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="1"/>
           <Shape name="stuetze.008" translation="1.68 0.0500001 -1.68" shapeId="11" clipDistance="300" nodeId="44" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
         </Shape>
-        <Shape name="deckel" translation="-2.98023e-08 2.45 0" shapeId="12" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="5">
+        <Shape name="deckel" translation="-2.98023e-08 2.45 0" shapeId="12" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="45" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="5">
           <TransformGroup name="doorAngel.001" translation="-1.505 -1.25 1.76" nodeId="46">
             <Shape name="door.001" translation="0.7225 0 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="47" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
               <Shape name="fensterVorneLinksAusschnitt" shapeId="14" visibility="false" nodeId="48" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="6"/>
@@ -117,8 +117,8 @@
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" shapeId="16" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="8"/>
-        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="16" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="63" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>

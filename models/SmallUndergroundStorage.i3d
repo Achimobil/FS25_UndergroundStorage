@@ -92,29 +92,29 @@
         </Shape>
       </TransformGroup>
       <TransformGroup name="building2" translation="1.86818e-07 0.01 -6" rotation="0 180 0" nodeId="47">
-        <ReferenceNode name="Aufzug" translation="7.0537e-07 0 3.7373e-14" referenceId="5" nodeId="71"/>
-        <Shape name="aufzugTrigger" translation="8.72201e-07 1 -3.5" rotation="180 2.50448e-06 180" scale="2 2 2" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="106" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+        <ReferenceNode name="Aufzug" translation="7.0537e-07 0 3.7373e-14" referenceId="5" nodeId="73"/>
+        <Shape name="aufzugTrigger" translation="8.72201e-07 1 -3.5" rotation="180 2.50448e-06 180" scale="2 2 2" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="108" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
       </TransformGroup>
-      <TransformGroup name="deko" nodeId="107">
-        <TransformGroup name="pfosten" translation="0 0 -6" nodeId="108">
-          <ReferenceNode name="bollard01" translation="2 0 6" rotation="0 180 0" referenceId="6" nodeId="115"/>
-          <ReferenceNode name="bollard01" translation="-2 0 6" referenceId="6" nodeId="120"/>
-          <ReferenceNode name="bollard01" translation="2 0 3" rotation="0 180 0" referenceId="6" nodeId="125"/>
-          <ReferenceNode name="bollard01" translation="-2 0 3" referenceId="6" nodeId="130"/>
-          <ReferenceNode name="bollard01" translation="2 0 -3.5" rotation="0 180 0" referenceId="6" nodeId="135"/>
-          <ReferenceNode name="bollard01" translation="-2 0 -3.5" referenceId="6" nodeId="140"/>
+      <TransformGroup name="deko" nodeId="109">
+        <TransformGroup name="pfosten" translation="0 0 -6" nodeId="110">
+          <ReferenceNode name="bollard01" translation="2 0 6" rotation="0 180 0" referenceId="6" nodeId="116"/>
+          <ReferenceNode name="bollard01" translation="-2 0 6" referenceId="6" nodeId="121"/>
+          <ReferenceNode name="bollard01" translation="2 0 3" rotation="0 180 0" referenceId="6" nodeId="126"/>
+          <ReferenceNode name="bollard01" translation="-2 0 3" referenceId="6" nodeId="131"/>
+          <ReferenceNode name="bollard01" translation="2 0 -3.5" rotation="0 180 0" referenceId="6" nodeId="136"/>
+          <ReferenceNode name="bollard01" translation="-2 0 -3.5" referenceId="6" nodeId="141"/>
         </TransformGroup>
-        <TransformGroup name="zaun" translation="0 0 -0.5" nodeId="145">
-          <Shape name="lowerPartShort" lockedgroup="true" translation="1.88243 -3.04122e-27 10.0096" rotation="9.25663e-26 90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="146" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="147" castsShadows="true" receiveShadows="true" materialIds="6"/>
+        <TransformGroup name="zaun" translation="0 0 -0.5" nodeId="146">
+          <Shape name="lowerPartShort" lockedgroup="true" translation="1.88243 -3.04122e-27 10.0096" rotation="9.25663e-26 90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="147" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="148" castsShadows="true" receiveShadows="true" materialIds="6"/>
           </Shape>
-          <Shape name="lowerPartShort" lockedgroup="true" translation="1.93 -1.62535e-26 1.91" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="148" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          <Shape name="lowerPartShort" lockedgroup="true" translation="1.93 -1.62535e-26 1.91" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="150" castsShadows="true" receiveShadows="true" materialIds="6"/>
           </Shape>
-          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.84 -1.62535e-26 1.75" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="150" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="151" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.84 -1.62535e-26 1.75" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="151" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="152" castsShadows="true" receiveShadows="true" materialIds="6"/>
           </Shape>
-          <Shape name="endElement02" lockedgroup="true" translation="-1.85 4.87563e-13 9.93" rotation="-2.81899e-12 -0 0" shapeId="8" static="true" clipDistance="300" nodeId="152" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="endElement02" lockedgroup="true" translation="-1.85 4.87563e-13 9.93" rotation="-2.81899e-12 -0 0" shapeId="8" static="true" clipDistance="300" nodeId="153" castsShadows="true" receiveShadows="true" materialIds="5"/>
         </TransformGroup>
       </TransformGroup>
     </TransformGroup>
