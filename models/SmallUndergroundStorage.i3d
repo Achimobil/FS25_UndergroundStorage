@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="SmallUndergroundStorage.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="12" filename="$data/shaders/glowShader.xml"/>
+    <File fileId="9" filename="$data/shared/default_normal.dds"/>
+    <File fileId="10" filename="$data/shared/default_specular.png"/>
+    <File fileId="2" filename="$data/shared/warningStripes_diffuse.png"/>
+    <File fileId="3" filename="$data/shared/warningStripes_normal.png"/>
+    <File fileId="4" filename="$data/shared/warningStripes_specular.png"/>
+    <File fileId="11" filename="$data/shared/window_diffuse.png"/>
+    <File fileId="5" filename="Aufzug.i3d"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="airPump01_mat" materialId="5">
+    </Material>
+    <Material name="constructionFenceGrid_mat" materialId="6" alphaBlending="true">
+    </Material>
+    <Material name="Default OBJ" materialId="7" diffuseColor="0.8 0.8 0.8 1" specularColor="0.8 1 0.8">
+    </Material>
+    <Material name="lambert1" materialId="9" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="UnnamedMaterial" materialId="11" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="UnnamedMaterial" materialId="401" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="warningStripes_mat" materialId="403">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="window_mat" materialId="12" alphaBlending="true" customShaderId="12" customShaderVariation="customEmissiveMap">
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+      <Emissivemap fileId="11"/>
+      <CustomParameter name="lightControl" value="100"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="SmallUndergroundStorage.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="mainComponent" nodeId="55">
+      <TransformGroup name="objectStorage" nodeId="56">
+        <TransformGroup name="spawnAreas" nodeId="372">
+          <TransformGroup name="spawnArea1Start" translation="-7.08165 0 -9.63991" nodeId="373">
+            <TransformGroup name="spawnArea1End" translation="3.1979 0 19.3351" nodeId="374"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="storageAreas" nodeId="375">
+          <TransformGroup name="storageArea1Start" translation="-1.79751 0 1.69191" nodeId="376">
+            <TransformGroup name="storageArea1End" translation="3.57858 0 7.774" nodeId="377"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="playerTrigger" translation="-3 1 0" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" nodeId="166" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="11">
+          <TransformGroup name="playerTriggerMarker" nodeId="165"/>
+        </Shape>
+        <Shape name="objectTrigger" translation="5.50548 1.5 0" scale="1 1 1.32343" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x50000" nodeId="400" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="401">
+          <TransformGroup name="objectTriggerMarker" nodeId="402"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="clearAreas" translation="9 0 11" nodeId="63">
+        <TransformGroup name="clearArea1Start" nodeId="64">
+          <TransformGroup name="clearArea1Width" translation="-18 0 0" nodeId="65"/>
+          <TransformGroup name="clearArea1Height" translation="0 0 -22" nodeId="66"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" translation="9 0 11" nodeId="67">
+        <TransformGroup name="levelArea1Start" nodeId="68">
+          <TransformGroup name="levelArea1Width" translation="-18 0 0" nodeId="69"/>
+          <TransformGroup name="levelArea1Height" translation="0 0 -22" nodeId="70"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="infoTrigger" translation="0 1 0" scale="8 2 12" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="75" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="11"/>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="76">
+        <TransformGroup name="tipOcclusionUpdateArea1Start" translation="7 0 11" nodeId="77">
+          <TransformGroup name="tipOcclusionUpdateArea1End" translation="-14 0 -22" nodeId="78"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="warningStripes" nodeId="408">
+        <Shape name="warningStripes01Start" translation="4 0 0" shapeId="4" clipDistance="200" nodeId="410" castsShadows="true" receiveShadows="true" materialIds="403">
+          <Shape name="warningStripes01End" translation="2.99871 -0.12 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="411" castsShadows="true" receiveShadows="true" terrainDecal="true" materialIds="403"/>
+        </Shape>
+        <Shape name="warningStripes02Start" translation="-7 0 0" shapeId="4" clipDistance="200" nodeId="412" castsShadows="true" receiveShadows="true" materialIds="403">
+          <Shape name="warningStripes02End" translation="2.99871 -0.12 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="413" castsShadows="true" receiveShadows="true" terrainDecal="true" materialIds="403"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="building2" translation="1.86818e-07 0.01 -6" rotation="0 180 0" nodeId="215">
+        <ReferenceNode name="Aufzug" translation="7.0537e-07 0 3.7373e-14" referenceId="5" nodeId="238"/>
+        <Shape name="aufzugTrigger" translation="8.72201e-07 1 -3.5" rotation="180 2.50448e-06 180" scale="2 2 2" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="273" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="11"/>
+      </TransformGroup>
+      <TransformGroup name="deko" nodeId="274">
+        <TransformGroup name="pfosten" translation="0 0 -6" nodeId="275">
+          <Shape name="bollard03" translation="1.5 -1.38804e-06 -3.5" rotation="-2.47668e-13 90 0" shapeId="6" static="true" clipDistance="60" nodeId="276" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="bollard03" translation="1.5 -1.38804e-06 3.5" rotation="-2.47668e-13 90 0" shapeId="6" static="true" clipDistance="60" nodeId="277" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="bollard03" translation="-1.5 -1.38804e-06 -3.5" rotation="-2.47668e-13 90 0" shapeId="6" static="true" clipDistance="60" nodeId="278" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="bollard03" translation="-1.5 -1.38804e-06 3.5" rotation="-2.47668e-13 90 0" shapeId="6" static="true" clipDistance="60" nodeId="279" castsShadows="true" receiveShadows="true" materialIds="5"/>
+        </TransformGroup>
+        <TransformGroup name="zaun" translation="0 0 -0.5" nodeId="280">
+          <Shape name="constructionFence01" lockedgroup="true" translation="-2 6.63521e-08 10" rotation="1.07473e-05 0 0" shapeId="7" static="true" clipDistance="50" nodeId="281" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="constructionFenceFrame" lockedgroup="true" shapeId="8" clipDistance="200" nodeId="282" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="constructionFenceGridBack" translation="-8.88178e-18 0 0" shapeId="9" clipDistance="200" nodeId="283" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="constructionFenceGridFront" shapeId="10" clipDistance="200" nodeId="284" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="col" shapeId="11" visibility="false" static="true" nodeId="285" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            </Shape>
+            <Shape name="col" translation="-0.0625 0 0" shapeId="12" visibility="false" static="true" nodeId="286" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            <Shape name="constructionFenceCoupling02" translation="-0.000732422 1.21995 0.00213623" rotation="-1.77213e-05 1.22689 -1.00317e-06" shapeId="13" clipDistance="20" nodeId="287" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          </Shape>
+          <Shape name="constructionFence01" lockedgroup="true" translation="1.87644 -6.60774e-07 9.88162" rotation="1.07473e-05 90 0" shapeId="7" static="true" clipDistance="50" nodeId="288" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="constructionFenceFrame" lockedgroup="true" shapeId="8" clipDistance="200" nodeId="289" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="constructionFenceGridBack" translation="-8.88178e-18 0 0" shapeId="9" clipDistance="200" nodeId="290" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="constructionFenceGridFront" shapeId="10" clipDistance="200" nodeId="291" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="col" shapeId="11" visibility="false" static="true" nodeId="292" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            </Shape>
+            <Shape name="col" translation="-0.0625 0 0" shapeId="12" visibility="false" static="true" nodeId="293" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            <Shape name="constructionFenceCoupling02" translation="-0.000732422 1.21995 0.00213623" rotation="-1.77213e-05 1.22689 -1.00317e-06" shapeId="13" clipDistance="20" nodeId="294" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          </Shape>
+          <Shape name="constructionFence01" lockedgroup="true" translation="1.87644 -6.60774e-07 5.87822" rotation="1.07473e-05 90 0" shapeId="7" static="true" clipDistance="50" nodeId="295" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="constructionFenceFrame" lockedgroup="true" shapeId="8" clipDistance="200" nodeId="296" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="constructionFenceGridBack" translation="-8.88178e-18 0 0" shapeId="9" clipDistance="200" nodeId="297" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="constructionFenceGridFront" shapeId="10" clipDistance="200" nodeId="298" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="col" shapeId="11" visibility="false" static="true" nodeId="299" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            </Shape>
+            <Shape name="col" translation="-0.0625 0 0" shapeId="12" visibility="false" static="true" nodeId="300" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            <Shape name="constructionFenceCoupling02" translation="-0.000732422 1.21995 0.00213623" rotation="-1.77213e-05 1.22689 -1.00317e-06" shapeId="13" clipDistance="20" nodeId="301" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          </Shape>
+          <Shape name="constructionFence01" lockedgroup="true" translation="-2.10994 -7.04655e-07 6.12582" rotation="1.07473e-05 -90 0" shapeId="7" static="true" clipDistance="50" nodeId="302" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="constructionFenceFrame" lockedgroup="true" shapeId="8" clipDistance="200" nodeId="303" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="constructionFenceGridBack" translation="-8.88178e-18 0 0" shapeId="9" clipDistance="200" nodeId="304" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="constructionFenceGridFront" shapeId="10" clipDistance="200" nodeId="305" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="col" shapeId="11" visibility="false" static="true" nodeId="306" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            </Shape>
+            <Shape name="col" translation="-0.0625 0 0" shapeId="12" visibility="false" static="true" nodeId="307" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            <Shape name="constructionFenceCoupling02" translation="-0.000732422 1.21995 0.00213623" rotation="-1.77213e-05 1.22689 -1.00317e-06" shapeId="13" clipDistance="20" nodeId="308" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          </Shape>
+          <Shape name="constructionFence01" lockedgroup="true" translation="-2.11 -7.04655e-07 2.12" rotation="1.07473e-05 -90 0" shapeId="7" static="true" clipDistance="50" nodeId="309" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="constructionFenceFrame" lockedgroup="true" shapeId="8" clipDistance="200" nodeId="310" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="constructionFenceGridBack" translation="-8.88178e-18 0 0" shapeId="9" clipDistance="200" nodeId="311" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="constructionFenceGridFront" shapeId="10" clipDistance="200" nodeId="312" castsShadows="true" receiveShadows="true" materialIds="6"/>
+              <Shape name="col" shapeId="11" visibility="false" static="true" nodeId="313" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            </Shape>
+            <Shape name="col" translation="-0.0625 0 0" shapeId="12" visibility="false" static="true" nodeId="314" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="9"/>
+            <Shape name="constructionFenceCoupling02" translation="-0.000732422 1.21995 0.00213623" rotation="-1.77213e-05 1.22689 -1.00317e-06" shapeId="13" clipDistance="20" nodeId="315" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="paletten" translation="0 0 5" nodeId="316"/>
+      </TransformGroup>
+      <TransformGroup name="lights" nodeId="317">
+        <Shape name="lightPoleSmall01" translation="1.75 0 -3.5" rotation="0 90 0" shapeId="14" static="true" nodeId="318" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7">
+          <Shape name="lightPoleSmall01Vis" shapeId="15" nodeId="319" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="holder01" shapeId="16" nodeId="320" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="spotlight01" translation="-0.282 6.47076 -0.188729" rotation="0 0 -40" shapeId="17" nodeId="321" castsShadows="true" receiveShadows="true" materialIds="5">
+                <TransformGroup name="illum" nodeId="322">
+                  <TransformGroup name="selfIllum" nodeId="323">
+                    <Shape name="glassIllum" translation="-0.083 -0.0489539 0.188489" shapeId="18" nodeId="324" castsShadows="true" receiveShadows="true" materialIds="12" weatherRequiredMask="0x40" renderInvisible="true"/>
+                  </TransformGroup>
+                  <TransformGroup name="realLights" nodeId="325" weatherRequiredMask="0x40">
+                    <Light name="spotLight1" translation="-0.1 1.56529e-08 0.18" rotation="-90 0 0" clipDistance="75" nodeId="326" type="spot" color="0.45 0.45 0.45" emitDiffuse="true" emitSpecular="true" range="25" coneAngle="110" dropOff="2" weatherRequiredMask="0x40"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <Shape name="Collision" shapeId="19" static="true" nodeId="327" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+              </Shape>
+              <Shape name="Collision" shapeId="20" static="true" nodeId="328" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+            </Shape>
+            <Shape name="holder02" shapeId="21" nodeId="329" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="spotlight02" translation="0.282 6.47076 -0.188729" rotation="9.33467e-06 -0 10" shapeId="22" nodeId="330" castsShadows="true" receiveShadows="true" materialIds="5">
+                <TransformGroup name="illum" nodeId="331">
+                  <TransformGroup name="selfIllum" nodeId="332">
+                    <Shape name="glassIllum" translation="0.083 -0.0489539 0.188489" shapeId="18" nodeId="333" castsShadows="true" receiveShadows="true" materialIds="12" weatherRequiredMask="0x40" renderInvisible="true"/>
+                  </TransformGroup>
+                  <TransformGroup name="realLights" nodeId="334" weatherRequiredMask="0x40">
+                    <Light name="spotLight1" translation="0.1 1.56529e-08 0.18" rotation="-90 0 0" clipDistance="75" nodeId="335" type="spot" color="0.45 0.45 0.45" emitDiffuse="true" emitSpecular="true" range="20" coneAngle="100" dropOff="2"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <Shape name="Collision" shapeId="23" static="true" nodeId="336" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+              </Shape>
+              <Shape name="Collision" shapeId="24" static="true" nodeId="337" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+            </Shape>
+          </Shape>
+        </Shape>
+        <Shape name="lightPoleSmall01" translation="-1.75 0 -3.5" rotation="0 90 0" shapeId="14" static="true" nodeId="338" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7">
+          <Shape name="lightPoleSmall01Vis" shapeId="15" nodeId="339" castsShadows="true" receiveShadows="true" materialIds="5">
+            <Shape name="holder01" shapeId="16" nodeId="340" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="spotlight01" translation="-0.281814 6.47076 -0.188729" rotation="2.95386e-06 8.85502e-06 -40" shapeId="17" nodeId="341" castsShadows="true" receiveShadows="true" materialIds="5">
+                <TransformGroup name="illum" nodeId="342">
+                  <TransformGroup name="selfIllum" nodeId="343">
+                    <Shape name="glassIllum" translation="-0.083 -0.0489539 0.188489" shapeId="18" nodeId="344" castsShadows="true" receiveShadows="true" materialIds="12" weatherRequiredMask="0x40" renderInvisible="true"/>
+                  </TransformGroup>
+                  <TransformGroup name="realLights" nodeId="345" weatherRequiredMask="0x40">
+                    <Light name="spotLight1" translation="-0.1 1.56529e-08 0.18" rotation="-90 0 0" clipDistance="75" nodeId="346" type="spot" color="0.45 0.45 0.45" emitDiffuse="true" emitSpecular="true" range="25" coneAngle="110" dropOff="2" weatherRequiredMask="0x40"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <Shape name="Collision" shapeId="19" static="true" nodeId="347" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+              </Shape>
+              <Shape name="Collision" shapeId="20" static="true" nodeId="348" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+            </Shape>
+            <Shape name="holder02" shapeId="21" nodeId="349" castsShadows="true" receiveShadows="true" materialIds="5">
+              <Shape name="spotlight02" translation="0.282 6.47076 -0.188729" rotation="9.33467e-06 -0 0" shapeId="22" nodeId="350" castsShadows="true" receiveShadows="true" materialIds="5">
+                <TransformGroup name="illum" nodeId="351">
+                  <TransformGroup name="selfIllum" nodeId="352">
+                    <Shape name="glassIllum" translation="0.083 -0.0489539 0.188489" shapeId="18" nodeId="353" castsShadows="true" receiveShadows="true" materialIds="12" weatherRequiredMask="0x40" renderInvisible="true"/>
+                  </TransformGroup>
+                  <TransformGroup name="realLights" nodeId="354" weatherRequiredMask="0x40">
+                    <Light name="spotLight1" translation="0.1 1.56529e-08 0.18" rotation="-90 0 0" clipDistance="75" nodeId="355" type="spot" color="0.45 0.45 0.45" emitDiffuse="true" emitSpecular="true" range="20" coneAngle="100" dropOff="2"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <Shape name="Collision" shapeId="23" static="true" nodeId="356" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+              </Shape>
+              <Shape name="Collision" shapeId="24" static="true" nodeId="357" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+            </Shape>
+          </Shape>
+        </Shape>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

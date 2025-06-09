@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeable type="objectStorage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_objectStorage</name>
+        <functions>
+            <function>$l10n_function_objectStorage</function>
+        </functions>
+        <image>store_smallUndergroundStorage.dds</image>
+        <price>25000</price>
+        <dailyUpkeep>120</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <species>placeable</species>
+        <category>silos</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>silos</tab>
+        </brush>
+    </storeData>
+    
+    <base>
+        <filename>models/SmallUndergroundStorage.i3d</filename>
+        <buysFarmland priceScale="1">false</buysFarmland>
+        <canBeDeleted>true</canBeDeleted>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+    
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+    
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+    
+    <indoorAreas/>
+    
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+    </tipOcclusionUpdateAreas>
+    
+    <placement>
+        <testAreas>
+            <testArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+        </testAreas>
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+    
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+        </updateAreas>
+    </ai>
+    
+    <infoTrigger triggerNode="infoTrigger"/>
+    
+    <hotspots>
+        <hotspot type="UNLOADING" linkNode="playerTriggerMarker" teleportNode="playerTriggerMarker"/>
+    </hotspots>
+    
+    <triggerMarkers>
+        <triggerMarker node="warningStripes01Start" adjustToGround="false"/>
+        <triggerMarker node="warningStripes02Start" adjustToGround="false"/>
+        <triggerMarker node="playerTriggerMarker" filename="$data/shared/assets/marker/markerIconLoad.i3d" adjustToGround="true"/>
+        <triggerMarker node="objectTriggerMarker" filename="$data/shared/assets/marker/markerIconUnload.i3d" adjustToGround="true"/>
+    </triggerMarkers>
+    
+    <animatedObjects>
+        <animatedObject saveId="aufzug">
+            <animation duration="10">
+                <part node="movingPart">
+                    <Keyframe time="0.0" translation="0 -2.376 0" rotation="0 0 0"/>
+                    <Keyframe time="0.3" translation="0 0.015 0" rotation="0 0 0"/>
+                    <Keyframe time="0.7" translation="0 0.015 0" rotation="0 0 0"/>
+                    <Keyframe time="1.0" translation="0 -2.376 0" rotation="0 0 0"/>
+                </part>
+                <part node="doorAngel.001">
+                    <Keyframe time="0.3" translation="-1.505 -1.25 1.76" rotation="0 0 0"/>
+                    <Keyframe time="0.4" translation="-1.505 -1.25 1.76" rotation="0 -90 0"/>
+                    <Keyframe time="0.6" translation="-1.505 -1.25 1.76" rotation="0 -90 0"/>
+                    <Keyframe time="0.7" translation="-1.505 -1.25 1.76" rotation="0 0 0"/>
+                </part>
+                <part node="doorAngel.002">
+                    <Keyframe time="0.3" translation="1.505 -1.25 1.76" rotation="0 0 0"/>
+                    <Keyframe time="0.4" translation="1.505 -1.25 1.76" rotation="0 90 0"/>
+                    <Keyframe time="0.6" translation="1.505 -1.25 1.76" rotation="0 90 0"/>
+                    <Keyframe time="0.7" translation="1.505 -1.25 1.76" rotation="0 0 0"/>
+                </part>
+                <part node="doorAngel.003">
+                    <Keyframe time="0.3" translation="-1.505 -1.25 -1.76" rotation="0 0 0"/>
+                    <Keyframe time="0.4" translation="-1.505 -1.25 -1.76" rotation="0 90 0"/>
+                    <Keyframe time="0.6" translation="-1.505 -1.25 -1.76" rotation="0 90 0"/>
+                    <Keyframe time="0.7" translation="-1.505 -1.25 -1.76" rotation="0 0 0"/>
+                </part>
+                <part node="doorAngel.004">
+                    <Keyframe time="0.3" translation="1.505 -1.25 -1.76" rotation="0 0 0"/>
+                    <Keyframe time="0.4" translation="1.505 -1.25 -1.76" rotation="0 -90 0"/>
+                    <Keyframe time="0.6" translation="1.505 -1.25 -1.76" rotation="0 -90 0"/>
+                    <Keyframe time="0.7" translation="1.505 -1.25 -1.76" rotation="0 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="aufzugTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
+            <sounds>
+                <moving file="$data/sounds/doors/doorLelyVectorLoop_01.ogg" loops="0" volume="110" radius="20" innerRadius="6" fadeOut="0.25"/>
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+    
+    <objectStorage supportsBales="true" supportsPallets="true" maxLength="8.5" maxWidth="6" maxHeight="10" capacity="200000" maxUnloadAmount="48">
+        <playerTrigger node="playerTrigger"/>
+        <objectTrigger node="objectTrigger"/>
+        <spawnAreas>
+            <spawnArea startNode="spawnArea1Start" endNode="spawnArea1End"/>
+        </spawnAreas>
+        <storageAreas>
+            <storageArea startNode="storageArea1Start" endNode="storageArea1End"/>
+        </storageAreas>
+    </objectStorage>
+    
+    <i3dMappings>        
+        <i3dMapping id="spawnArea1Start" node="0>0|0|0"/>
+        <i3dMapping id="spawnArea1End" node="0>0|0|0|0"/>
+        <i3dMapping id="storageArea1Start" node="0>0|1|0"/>
+        <i3dMapping id="storageArea1End" node="0>0|1|0|0"/>
+        <i3dMapping id="playerTrigger" node="0>0|2"/>
+        <i3dMapping id="playerTriggerMarker" node="0>0|2|0"/>
+        <i3dMapping id="objectTrigger" node="0>0|3"/>
+        <i3dMapping id="objectTriggerMarker" node="0>0|3|0"/>
+        
+        <i3dMapping id="clearArea1Start" node="0>1|0"/>
+        <i3dMapping id="clearArea1Width" node="0>1|0|0"/>
+        <i3dMapping id="clearArea1Height" node="0>1|0|1"/>
+        
+        <i3dMapping id="levelArea1Start" node="0>2|0"/>
+        <i3dMapping id="levelArea1Width" node="0>2|0|0"/>
+        <i3dMapping id="levelArea1Height" node="0>2|0|1"/>
+        
+        <i3dMapping id="infoTrigger" node="0>3"/>
+        
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0"/>
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0"/>
+        
+        <i3dMapping id="warningStripes01Start" node="0>5|0"/>
+        <i3dMapping id="warningStripes02Start" node="0>5|1"/>
+        
+        <i3dMapping id="aufzugTrigger" node="0>6|1"/>
+        <i3dMapping id="movingPart" node="0>6|0|2"/>
+        <i3dMapping id="doorAngel.001" node="0>6|0|2|5|0"/>
+        <i3dMapping id="doorAngel.002" node="0>6|0|2|5|1"/>
+        <i3dMapping id="doorAngel.003" node="0>6|0|2|5|2"/>
+        <i3dMapping id="doorAngel.004" node="0>6|0|2|5|3"/>
+    </i3dMappings>
+</placeable>

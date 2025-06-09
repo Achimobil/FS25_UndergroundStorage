@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Aufzug.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/buildingShader.xml"/>
+    <File fileId="13" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="25" filename="$data/shared/clearPlastic_diffuse.dds"/>
+    <File fileId="26" filename="../textures/Metal_WallPanel_1K_albedo.dds"/>
+    <File fileId="29" filename="../textures/Metal_WallPanel_1K_height.dds"/>
+    <File fileId="27" filename="../textures/Metal_WallPanel_1K_normal.dds"/>
+    <File fileId="28" filename="../textures/Metal_WallPanel_1K_specular.dds"/>
+    <File fileId="20" filename="../textures/metal_plate_diff_1k.dds"/>
+    <File fileId="23" filename="../textures/metal_plate_disp_1k.dds"/>
+    <File fileId="21" filename="../textures/metal_plate_nor_gl_1k.dds"/>
+    <File fileId="22" filename="../textures/metal_plate_rough_1k.dds"/>
+    <File fileId="1" filename="../textures/rusty_metal_02_diff_1k.dds"/>
+    <File fileId="10" filename="../textures/rusty_metal_02_disp_1k.dds"/>
+    <File fileId="2" filename="../textures/rusty_metal_02_nor_gl_1k.dds"/>
+    <File fileId="3" filename="../textures/rusty_metal_02_rough_1k.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="default" materialId="62" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="glas_mat" materialId="63" specularColor="0.494118 1 0" alphaBlending="true" customShaderId="13">
+      <Texture fileId="25"/>
+    </Material>
+    <Material name="metal_plate" materialId="64" customShaderId="4" customShaderVariation="customParallax">
+      <Texture fileId="20"/>
+      <Normalmap fileId="21"/>
+      <Glossmap fileId="22"/>
+      <Custommap name="mParallaxMap" fileId="23"/>
+    </Material>
+    <Material name="MetalWallPanel_mat" materialId="65" customShaderId="4" customShaderVariation="customParallax">
+      <Texture fileId="26"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="28"/>
+      <Custommap name="mParallaxMap" fileId="29"/>
+    </Material>
+    <Material name="rustyMetal_mat" materialId="66" customShaderId="4" customShaderVariation="customParallax">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="mParallaxMap" fileId="10"/>
+    </Material>
+    <Material name="vehcle_mat" materialId="67" diffuseColor="0.737255 0.266667 0.8 1" specularColor="0.494118 1 0" customShaderId="13">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Aufzug.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="Aufzug" rotation="-6.83019e-06 -0 0" nodeId="85">
+      <Camera name="Camera" translation="-3.14518 2.43421 5.99079" rotation="-14.0192 -21.0195 -0.357727" nodeId="86" fov="50" nearClip="0.1" farClip="1000" orthographicHeight="1"/>
+      <Shape name="aushub" rotation="-6.83019e-06 -0 0" shapeId="1" static="true" clipDistance="300" nodeId="87" castsShadows="true" receiveShadows="true" materialIds="66">
+        <Shape name="Plane" translation="0 0.01 -4.37114e-10" rotation="-6.83019e-06 -0 0" shapeId="2" clipDistance="300" nodeId="88" castsShadows="true" receiveShadows="true" materialIds="67"/>
+      </Shape>
+      <TransformGroup name="movingPart" translation="0 0.015 -6.55671e-10" rotation="-6.83019e-06 -0 0" nodeId="89">
+        <Shape name="Cylinder1.001" translation="-1.68 1.15 -5.02681e-08" rotation="-6.83019e-06 -0 0" shapeId="3" clipDistance="300" nodeId="90" castsShadows="true" receiveShadows="true" materialIds="67"/>
+        <Shape name="Cylinder1.002" translation="1.68 1.15 -5.02681e-08" rotation="-6.83019e-06 -0 0" shapeId="3" clipDistance="300" nodeId="91" castsShadows="true" receiveShadows="true" materialIds="67"/>
+        <Shape name="Cylinder2.001" translation="-1.68 -0.25 1.09278e-08" rotation="-6.83019e-06 -0 0" shapeId="4" clipDistance="300" nodeId="92" castsShadows="true" receiveShadows="true" materialIds="67"/>
+        <Shape name="Cylinder2.002" translation="1.68 -0.25 1.09278e-08" rotation="-6.83019e-06 -0 0" shapeId="4" clipDistance="300" nodeId="93" castsShadows="true" receiveShadows="true" materialIds="67"/>
+        <Shape name="boden" translation="-2.98023e-08 -0.05 2.18557e-09" rotation="-6.83019e-06 -0 0" shapeId="5" clipDistance="300" nodeId="94" castsShadows="true" receiveShadows="true" materialIds="64">
+          <Shape name="stuetze.001" translation="-1.68 0.0500001 1.68" rotation="-6.83019e-06 -0 0" shapeId="6" clipDistance="300" nodeId="95" castsShadows="true" receiveShadows="true" materialIds="66"/>
+          <Shape name="stuetze.002" translation="-1.68 0.0500001 0.3" rotation="-6.83019e-06 -0 0" shapeId="7" clipDistance="300" nodeId="96" castsShadows="true" receiveShadows="true" materialIds="66"/>
+          <Shape name="stuetze.004" translation="-1.68 0.05 -1.68" rotation="-6.83019e-06 -0 0" shapeId="8" clipDistance="300" nodeId="97" castsShadows="true" receiveShadows="true" materialIds="66"/>
+          <Shape name="stuetze.005" translation="1.68 0.0500001 1.68" rotation="-6.83019e-06 -0 0" shapeId="9" clipDistance="300" nodeId="98" castsShadows="true" receiveShadows="true" materialIds="66"/>
+          <Shape name="stuetze.007" translation="1.68 0.05 -0.3" rotation="-6.83019e-06 -0 0" shapeId="10" clipDistance="300" nodeId="99" castsShadows="true" receiveShadows="true" materialIds="66"/>
+          <Shape name="stuetze.008" translation="1.68 0.05 -1.68" rotation="-6.83019e-06 -0 0" shapeId="11" clipDistance="300" nodeId="100" castsShadows="true" receiveShadows="true" materialIds="66"/>
+        </Shape>
+        <Shape name="deckel" translation="-2.98023e-08 2.45 -1.07093e-07" rotation="-6.83019e-06 -0 0" shapeId="12" kinematic="true" clipDistance="300" nodeId="101" castsShadows="true" receiveShadows="true" materialIds="64">
+          <TransformGroup name="doorAngel.001" translation="-1.505 -1.25 1.76" rotation="-6.83019e-06 -0 0" nodeId="102">
+            <Shape name="door.001" translation="0.7225 0 0" rotation="-6.83019e-06 -0 0" shapeId="13" kinematic="true" clipDistance="300" nodeId="103" castsShadows="true" receiveShadows="true" materialIds="67">
+              <Shape name="fensterVorneLinksAusschnitt" rotation="-6.83019e-06 -0 0" shapeId="14" nodeId="104" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="62"/>
+              <Shape name="fensterVorneLinksAusschnitt.001" translation="0 0.58 0.00250003" rotation="-6.83019e-06 -0 0" shapeId="15" clipDistance="300" nodeId="105" castsShadows="true" receiveShadows="true" materialIds="63"/>
+            </Shape>
+          </TransformGroup>
+          <TransformGroup name="doorAngel.002" translation="1.505 -1.25 1.76" rotation="-6.83019e-06 -0 0" nodeId="106">
+            <Shape name="door.002" translation="-0.7225 0 0" rotation="-6.83019e-06 -0 0" shapeId="13" kinematic="true" clipDistance="300" nodeId="107" castsShadows="true" receiveShadows="true" materialIds="67">
+              <Shape name="fensterVorneLinksAusschnitt.002" rotation="-6.83019e-06 -0 0" shapeId="14" nodeId="108" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="62"/>
+              <Shape name="fensterVorneLinksAusschnitt.003" translation="0 0.58 0.00250003" rotation="-6.83019e-06 -0 0" shapeId="15" clipDistance="300" nodeId="109" castsShadows="true" receiveShadows="true" materialIds="63"/>
+            </Shape>
+          </TransformGroup>
+          <TransformGroup name="doorAngel.003" translation="-1.505 -1.25 -1.76" rotation="-6.83019e-06 -0 0" nodeId="110">
+            <Shape name="door.003" translation="0.7225 0 0" rotation="-6.83019e-06 -0 0" shapeId="13" kinematic="true" clipDistance="300" nodeId="111" castsShadows="true" receiveShadows="true" materialIds="67">
+              <Shape name="fensterVorneLinksAusschnitt.004" translation="0 -5.2108e-15 -1.19209e-07" rotation="-6.83019e-06 -0 0" shapeId="14" nodeId="112" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="62"/>
+              <Shape name="fensterVorneLinksAusschnitt.005" translation="0 0.58 0.00249991" rotation="-6.83019e-06 -0 0" shapeId="15" clipDistance="300" nodeId="113" castsShadows="true" receiveShadows="true" materialIds="63"/>
+            </Shape>
+          </TransformGroup>
+          <TransformGroup name="doorAngel.004" translation="1.505 -1.25 -1.76" rotation="-6.83019e-06 -0 0" nodeId="114">
+            <Shape name="door.004" translation="-0.7225 0 0" rotation="-6.83019e-06 -0 0" shapeId="13" kinematic="true" clipDistance="300" nodeId="115" castsShadows="true" receiveShadows="true" materialIds="67">
+              <Shape name="fensterVorneLinksAusschnitt.006" translation="0 -5.2108e-15 -1.19209e-07" rotation="-6.83019e-06 -0 0" shapeId="14" nodeId="116" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="62"/>
+              <Shape name="fensterVorneLinksAusschnitt.007" translation="0 0.58 0.00249991" rotation="-6.83019e-06 -0 0" shapeId="15" clipDistance="300" nodeId="117" castsShadows="true" receiveShadows="true" materialIds="63"/>
+            </Shape>
+          </TransformGroup>
+        </Shape>
+        <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" rotation="-6.83019e-06 -0 0" shapeId="16" kinematic="true" clipDistance="300" nodeId="118" castsShadows="true" receiveShadows="true" materialIds="65"/>
+        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" rotation="-6.83019e-06 -0 0" shapeId="16" kinematic="true" clipDistance="300" nodeId="119" castsShadows="true" receiveShadows="true" materialIds="65"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

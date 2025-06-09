@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="99">
+    <author>Achimobil</author>
+    <version>0.0.0.1</version>
+    
+    <title>
+        <en>Underground Storage</en>
+        <de>Unterirdisches Lager</de>
+        <it>Stoccaggio Sotterraneo</it>
+        <ru>Подземное Хранилище</ru>
+    </title>
+    
+    <description>
+        <en>
+            <![CDATA[later
+]]></en>
+        <de>
+            <![CDATA[Kleiner Zugangsbereich zum unterirdischen Lager für Paletten und Ballen.
+
+Es handelt sich um ein standard Objekt Lager.
+Alle Ballen und Paletten können hier eingelagert werden.
+Silage Ballen gären weiter.
+
+Preis: 25.000 €
+Unterhalt: 120 €/Tag
+Kapazität: 200.000 Ballen und Paletten
+
+Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
+Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
+
+Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_UndergroundStorage">GitHub</a>.
+]]></de>
+    </description>
+    
+    <multiplayer supported="true"/>
+    
+    <iconFilename>icon_UndergroundStorage.dds</iconFilename>
+    
+    <storeItems>
+        <storeItem xmlFilename="SmallUndergroundStorage.xml"/>
+    </storeItems>
+</modDesc>
