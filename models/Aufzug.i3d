@@ -63,7 +63,7 @@
       <Custommap name="detailNormal" fileId="14"/>
       <Custommap name="detailDiffuse" fileId="15"/>
     </Material>
-    <Material name="window_mat" materialId="7" emissiveColor="1 1 1 1" specularColor="0.627451 1 0" alphaBlending="true" customShaderId="29">
+    <Material name="window_mat" materialId="7" emissiveColor="1 1 1 1" specularColor="0.627451 1 0" customShaderId="29">
       <Texture fileId="27"/>
     </Material>
   </Materials>
@@ -99,7 +99,7 @@
             </Shape>
           </TransformGroup>
           <TransformGroup name="doorAngel.002" translation="1.505 -1.25 1.76" nodeId="50">
-            <Shape name="door.002" translation="-0.7225 0 0" shapeId="13" nodeId="51" castsShadows="true" receiveShadows="true" materialIds="2">
+            <Shape name="door.002" translation="-0.7225 0 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="51" castsShadows="true" receiveShadows="true" materialIds="2">
               <Shape name="fensterVorneLinksAusschnitt.002" shapeId="14" visibility="false" nodeId="52" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="6"/>
               <Shape name="fensterVorneLinksAusschnitt.003" translation="0 0.58 0.00250006" shapeId="15" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="53" castsShadows="true" receiveShadows="true" materialIds="7"/>
             </Shape>
@@ -118,7 +118,7 @@
           </TransformGroup>
         </Shape>
         <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="8"/>
-        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="16" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>

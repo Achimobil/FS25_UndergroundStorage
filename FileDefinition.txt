@@ -6,4 +6,4 @@
 *.zip
 store\*.png
 images
-SourceModels
+models\*.blend*
