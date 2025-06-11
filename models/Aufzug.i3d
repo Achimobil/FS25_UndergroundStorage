@@ -124,7 +124,7 @@
           </TransformGroup>
         </Shape>
         <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="8"/>
-        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="17" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>
