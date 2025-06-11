@@ -23,6 +23,7 @@
         <filename>models/SmallUndergroundStorage.i3d</filename>
         <buysFarmland priceScale="1">false</buysFarmland>
         <canBeDeleted>true</canBeDeleted>
+        <boughtWithFarmland>true</boughtWithFarmland>
         <canBeRenamed>true</canBeRenamed>
     </base>
     
