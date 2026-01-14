@@ -3,7 +3,7 @@ Mit Build.cmd kann man den Mod als zip zusammenpacken, wenn man 7-zip installier
 Verwendung einer Version aus GitHub ist auf eigene Gefahr.
 
 # ModHub
-geplant
+https://www.farming-simulator.com/mod.php?mod_id=325885&title=fs2025
 
 # Build my Mods self
 Deutsche Anleitung: https://youtu.be/qG8wNBkjB3w
