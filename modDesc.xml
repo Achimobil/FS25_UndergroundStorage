@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="100">
+<modDesc descVersion="105">
     <author>Achimobil</author>
-    <version>1.0.0.0</version>
+    <version>1.0.0.1</version>
     
     <title>
         <en>Underground Storage</en>
@@ -27,7 +27,8 @@ Capacity: 200,000 bales and pallets
 Uploading to sites other than ModHub is prohibited and therefore illegal. Only link to the original download link. NO substitute links!
 Modifying or re-uploading, whether in whole or in part, is not permitted!
 
-Please report errors and suggestions on <a href="https://github.com/Achimobil/FS25_UndergroundStorage">GitHub</a>.
+Please report errors and suggestions on GitHub:
+https://github.com/Achimobil/FS25_UndergroundStorage
 ]]></en>
         <de>
             <![CDATA[Kleiner Zugangsbereich zum unterirdischen Lager für Paletten und Ballen.
@@ -45,7 +46,11 @@ Kapazität: 200.000 Ballen und Paletten
 Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
 Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
-Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_UndergroundStorage">GitHub</a>.
+Fehler und Anregungen gerne auf GitHub:
+https://github.com/Achimobil/FS25_UndergroundStorage
+
+Changelog:
+1.0.0.1 - Objekttrigger korrigiert
 ]]></de>
     </description>
     
