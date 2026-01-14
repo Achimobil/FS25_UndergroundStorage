@@ -49,8 +49,8 @@
     <TransformGroup name="mainComponent" nodeId="17">
       <TransformGroup name="objectStorage" nodeId="18">
         <TransformGroup name="spawnAreas" nodeId="19">
-          <TransformGroup name="spawnArea1Start" translation="-7.08165 0 -9.63991" nodeId="20">
-            <TransformGroup name="spawnArea1End" translation="3.1979 0 19.3351" nodeId="21"/>
+          <TransformGroup name="spawnArea1Start" translation="-3.64 0 -7.76" rotation="0 -90 0" nodeId="20">
+            <TransformGroup name="spawnArea1End" translation="15.52 0 2.7" rotation="-0 180 0" nodeId="21"/>
           </TransformGroup>
         </TransformGroup>
         <TransformGroup name="storageAreas" nodeId="22">
@@ -61,7 +61,7 @@
         <Shape name="playerTrigger" translation="-3 1 0" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" nodeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7">
           <TransformGroup name="playerTriggerMarker" nodeId="26"/>
         </Shape>
-        <Shape name="objectTrigger" translation="5.50548 1.5 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x50000" nodeId="27" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7">
+        <Shape name="objectTrigger" translation="5.15923 2.00003 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x50000" nodeId="27" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7">
           <TransformGroup name="objectTriggerMarker" nodeId="28"/>
         </Shape>
       </TransformGroup>
@@ -85,10 +85,10 @@
       </TransformGroup>
       <TransformGroup name="warningStripes" translation="0 0.01 0" nodeId="41">
         <Shape name="warningStripes01Start" translation="4 0 0" shapeId="4" clipDistance="200" nodeId="42" castsShadows="true" receiveShadows="true" materialIds="8">
-          <Shape name="warningStripes01End" translation="2.99871 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="8"/>
+          <Shape name="warningStripes01End" translation="3 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="8"/>
         </Shape>
-        <Shape name="warningStripes02Start" translation="-7 0 0" shapeId="4" clipDistance="200" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="8">
-          <Shape name="warningStripes02End" translation="2.99871 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="warningStripes02Start" translation="-3.8 0 -1.13234e-06" rotation="0 180 0" shapeId="4" clipDistance="200" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="8">
+          <Shape name="warningStripes02End" translation="2.98 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="8"/>
         </Shape>
       </TransformGroup>
       <TransformGroup name="building2" translation="1.86818e-07 0.01 -6" rotation="0 180 0" nodeId="46">

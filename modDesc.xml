@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="105">
     <author>Achimobil</author>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     
     <title>
         <en>Underground Storage</en>
@@ -51,6 +51,7 @@ https://github.com/Achimobil/FS25_UndergroundStorage
 
 Changelog:
 1.0.0.1 - Objekttrigger korrigiert
+1.0.0.2 - Trigger verkleinert und gedreht zur Optimierung beim Auslagern
 ]]></de>
     </description>
     
