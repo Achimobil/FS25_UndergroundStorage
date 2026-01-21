@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="105">
     <author>Achimobil</author>
-    <version>1.0.0.2</version>
+    <version>1.0.1.0</version>
     
     <title>
         <en>Underground Storage</en>
@@ -29,6 +29,11 @@ Modifying or re-uploading, whether in whole or in part, is not permitted!
 
 Please report errors and suggestions on GitHub:
 https://github.com/Achimobil/FS25_UndergroundStorage
+
+Changelog:
+1.0.1.0
+- Object triggers corrected
+- Triggers reduced in size and rotated for optimisation during offloading
 ]]></en>
         <de>
             <![CDATA[Kleiner Zugangsbereich zum unterirdischen Lager für Paletten und Ballen.
@@ -50,8 +55,9 @@ Fehler und Anregungen gerne auf GitHub:
 https://github.com/Achimobil/FS25_UndergroundStorage
 
 Changelog:
-1.0.0.1 - Objekttrigger korrigiert
-1.0.0.2 - Trigger verkleinert und gedreht zur Optimierung beim Auslagern
+1.0.1.0 
+- Objekttrigger korrigiert
+- Trigger verkleinert und gedreht zur Optimierung beim Auslagern
 ]]></de>
     </description>
     
