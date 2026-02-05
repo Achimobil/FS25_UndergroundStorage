@@ -77,7 +77,7 @@
           <TransformGroup name="levelArea1Height" translation="0 0 -22" nodeId="36"/>
         </TransformGroup>
       </TransformGroup>
-      <Shape name="infoTrigger" translation="0 1 0" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="37" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+      <Shape name="infoTrigger" translation="0 2 0" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="37" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
       <TransformGroup name="tipOcclusionUpdateAreas" nodeId="38">
         <TransformGroup name="tipOcclusionUpdateArea1Start" translation="7 0 11" nodeId="39">
           <TransformGroup name="tipOcclusionUpdateArea1End" translation="-14 0 -22" nodeId="40"/>
@@ -93,7 +93,7 @@
       </TransformGroup>
       <TransformGroup name="building2" translation="1.86818e-07 0.01 -6" rotation="0 180 0" nodeId="46">
         <ReferenceNode name="Aufzug" translation="7.0537e-07 0 3.7373e-14" referenceId="5" nodeId="73"/>
-        <Shape name="aufzugTrigger" translation="8.72201e-07 1 -3.5" rotation="180 2.50448e-06 180" scale="2 2 2" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="108" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+        <Shape name="aufzugTrigger" translation="7.8014e-07 1 -1.39389" rotation="180 2.50448e-06 180" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="108" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
       </TransformGroup>
       <TransformGroup name="deko" nodeId="109">
         <TransformGroup name="pfosten" translation="0 0 -6" nodeId="110">
