@@ -11,20 +11,20 @@
     <File fileId="13" filename="$data/shaders/vehicleShader.xml"/>
     <File fileId="29" filename="$data/shared/clearGlass_diffuse.dds"/>
     <File fileId="15" filename="$data/shared/detailLibrary/flat_normal.png"/>
-    <File fileId="23" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
-    <File fileId="22" filename="$data/shared/detailLibrary/metallic/clear_specular.png"/>
+    <File fileId="24" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="23" filename="$data/shared/detailLibrary/metallic/clear_specular.png"/>
     <File fileId="16" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
     <File fileId="14" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
-    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
-    <File fileId="20" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="22" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
     <File fileId="32" filename="../textures/Metal_WallPanel_1K_albedo.dds"/>
     <File fileId="35" filename="../textures/Metal_WallPanel_1K_height.dds"/>
     <File fileId="33" filename="../textures/Metal_WallPanel_1K_normal.dds"/>
     <File fileId="34" filename="../textures/Metal_WallPanel_1K_specular.dds"/>
-    <File fileId="24" filename="../textures/metal_plate_diff_1k.dds"/>
-    <File fileId="27" filename="../textures/metal_plate_disp_1k.dds"/>
-    <File fileId="25" filename="../textures/metal_plate_nor_gl_1k.dds"/>
-    <File fileId="26" filename="../textures/metal_plate_rough_1k.dds"/>
+    <File fileId="25" filename="../textures/metal_plate_diff_1k.dds"/>
+    <File fileId="28" filename="../textures/metal_plate_disp_1k.dds"/>
+    <File fileId="26" filename="../textures/metal_plate_nor_gl_1k.dds"/>
+    <File fileId="27" filename="../textures/metal_plate_rough_1k.dds"/>
     <File fileId="1" filename="../textures/rusty_metal_02_diff_1k.dds"/>
     <File fileId="10" filename="../textures/rusty_metal_02_disp_1k.dds"/>
     <File fileId="2" filename="../textures/rusty_metal_02_nor_gl_1k.dds"/>
@@ -33,24 +33,24 @@
 
 
   <Materials>
-    <Material name="default" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
+    <Material name="default" materialId="3" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
-    <Material name="hydro_mat" materialId="4" diffuseColor="1 1 1 1" specularColor="0.501961 1 0" customShaderId="13">
-      <Custommap name="detailSpecular" fileId="22"/>
+    <Material name="hydro_mat" materialId="5" diffuseColor="1 1 1 1" specularColor="0.501961 1 0" customShaderId="13">
+      <Custommap name="detailSpecular" fileId="23"/>
       <Custommap name="detailNormal" fileId="15"/>
-      <Custommap name="detailDiffuse" fileId="23"/>
+      <Custommap name="detailDiffuse" fileId="24"/>
     </Material>
-    <Material name="hydroTop_mat" materialId="3" diffuseColor="1 1 1 1" specularColor="0.501961 1 0" customShaderId="13">
-      <Custommap name="detailSpecular" fileId="20"/>
+    <Material name="hydroTop_mat" materialId="4" diffuseColor="1 1 1 1" specularColor="0.501961 1 0" customShaderId="13">
+      <Custommap name="detailSpecular" fileId="21"/>
       <Custommap name="detailNormal" fileId="15"/>
-      <Custommap name="detailDiffuse" fileId="21"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
       <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
     </Material>
-    <Material name="metal_plate" materialId="5" customShaderId="4" customShaderVariation="customParallax">
-      <Texture fileId="24"/>
-      <Normalmap fileId="25"/>
-      <Glossmap fileId="26"/>
-      <Custommap name="mParallaxMap" fileId="27"/>
+    <Material name="metal_plate" materialId="6" customShaderId="4" customShaderVariation="customParallax">
+      <Texture fileId="25"/>
+      <Normalmap fileId="26"/>
+      <Glossmap fileId="27"/>
+      <Custommap name="mParallaxMap" fileId="28"/>
     </Material>
     <Material name="MetalWallPanel_mat" materialId="8" customShaderId="4" customShaderVariation="customParallax">
       <Texture fileId="32"/>
@@ -79,52 +79,52 @@
   </Shapes>
 
   <Scene>
-    <TransformGroup name="Aufzug" nodeId="29">
-      <Camera name="Camera" translation="-3.00273 5.08157 7.02213" rotation="-29.1694 -17.3525 -0.349044" nodeId="30" fov="50" nearClip="0.1" farClip="1000" orthographicHeight="1"/>
+    <TransformGroup name="Aufzug" nodeId="30">
       <Shape name="aushub" shapeId="1" nodeId="31" castsShadows="true" receiveShadows="true" materialIds="1">
         <Shape name="Plane" translation="0 0.01 0" shapeId="2" clipDistance="300" nodeId="32" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2"/>
       </Shape>
       <TransformGroup name="movingPart" translation="0 0.015 0" nodeId="33">
-        <Shape name="Cylinder1.001" translation="-1.68 1.15 0" shapeId="3" clipDistance="300" nodeId="34" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="3"/>
-        <Shape name="Cylinder1.002" translation="1.68 1.15 0" shapeId="3" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="3"/>
-        <Shape name="Cylinder2.001" translation="-1.68 -0.25 0" shapeId="4" clipDistance="300" nodeId="36" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="4"/>
-        <Shape name="Cylinder2.002" translation="1.68 -0.25 0" shapeId="4" clipDistance="300" nodeId="37" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="4"/>
-        <Shape name="boden" translation="-2.98023e-08 -0.05 0" shapeId="5" clipDistance="300" nodeId="38" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="5">
-          <Shape name="stuetze.001" translation="-1.68 0.0500001 1.68" shapeId="6" clipDistance="300" nodeId="39" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
-          <Shape name="stuetze.002" translation="-1.68 0.0500001 0.3" shapeId="7" clipDistance="300" nodeId="40" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
-          <Shape name="stuetze.004" translation="-1.68 0.0500001 -1.68" shapeId="8" clipDistance="300" nodeId="41" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
-          <Shape name="stuetze.005" translation="1.68 0.0500001 1.68" shapeId="9" clipDistance="300" nodeId="42" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
-          <Shape name="stuetze.007" translation="1.68 0.0500001 -0.3" shapeId="10" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="1"/>
-          <Shape name="stuetze.008" translation="1.68 0.0500001 -1.68" shapeId="11" clipDistance="300" nodeId="44" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
+        <Shape name="BlockInside" translation="0 1.07117 0" shapeId="3" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="34" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3"/>
+        <Shape name="Cylinder1.001" translation="-1.68 1.15 0" shapeId="4" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="4"/>
+        <Shape name="Cylinder1.002" translation="1.68 1.15 0" shapeId="4" clipDistance="300" nodeId="36" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="4"/>
+        <Shape name="Cylinder2.001" translation="-1.68 -0.25 0" shapeId="5" clipDistance="300" nodeId="37" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="5"/>
+        <Shape name="Cylinder2.002" translation="1.68 -0.25 0" shapeId="5" clipDistance="300" nodeId="38" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="5"/>
+        <Shape name="boden" translation="-2.98023e-08 -0.05 0" shapeId="6" clipDistance="300" nodeId="39" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="6">
+          <Shape name="stuetze.001" translation="-1.68 0.0500001 1.68" shapeId="7" clipDistance="300" nodeId="40" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
+          <Shape name="stuetze.002" translation="-1.68 0.0500001 0.3" shapeId="8" clipDistance="300" nodeId="41" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
+          <Shape name="stuetze.004" translation="-1.68 0.0500001 -1.68" shapeId="9" clipDistance="300" nodeId="42" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
+          <Shape name="stuetze.005" translation="1.68 0.0500001 1.68" shapeId="10" clipDistance="300" nodeId="43" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
+          <Shape name="stuetze.007" translation="1.68 0.0500001 -0.3" shapeId="11" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="1"/>
+          <Shape name="stuetze.008" translation="1.68 0.0500001 -1.68" shapeId="12" clipDistance="300" nodeId="45" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="1"/>
         </Shape>
-        <Shape name="deckel" translation="-2.98023e-08 2.45 0" shapeId="12" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="5">
-          <TransformGroup name="doorAngel.001" translation="-1.505 -1.25 1.76" nodeId="46">
-            <Shape name="door.001" translation="0.7225 0 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="47" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
-              <Shape name="fensterVorneLinksAusschnitt" shapeId="14" visibility="false" nodeId="48" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="6"/>
-              <Shape name="fensterVorneLinksAusschnitt.001" translation="0 0.58 0.00250006" shapeId="15" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="49" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
+        <Shape name="deckel" translation="-2.98023e-08 2.45 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="46" castsShadows="true" receiveShadows="true" materialIds="6">
+          <TransformGroup name="doorAngel.001" translation="-1.505 -1.25 1.76" nodeId="47">
+            <Shape name="door.001" translation="0.7225 0 0" shapeId="14" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="48" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
+              <Shape name="fensterVorneLinksAusschnitt" shapeId="15" nodeId="49" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="3"/>
+              <Shape name="fensterVorneLinksAusschnitt.001" translation="0 0.58 0.00250006" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="50" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
             </Shape>
           </TransformGroup>
-          <TransformGroup name="doorAngel.002" translation="1.505 -1.25 1.76" nodeId="50">
-            <Shape name="door.002" translation="-0.7225 0 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="51" castsShadows="true" receiveShadows="true" materialIds="2">
-              <Shape name="fensterVorneLinksAusschnitt.002" shapeId="14" visibility="false" nodeId="52" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="6"/>
-              <Shape name="fensterVorneLinksAusschnitt.003" translation="0 0.58 0.00250006" shapeId="15" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="53" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
+          <TransformGroup name="doorAngel.002" translation="1.505 -1.25 1.76" nodeId="51">
+            <Shape name="door.002" translation="-0.7225 0 0" shapeId="14" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="52" castsShadows="true" receiveShadows="true" materialIds="2">
+              <Shape name="fensterVorneLinksAusschnitt.002" shapeId="15" visibility="false" nodeId="53" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="3"/>
+              <Shape name="fensterVorneLinksAusschnitt.003" translation="0 0.58 0.00250006" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="54" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
             </Shape>
           </TransformGroup>
-          <TransformGroup name="doorAngel.003" translation="-1.505 -1.25 -1.76" nodeId="54">
-            <Shape name="door.003" translation="0.7225 0 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="55" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
-              <Shape name="fensterVorneLinksAusschnitt.004" translation="0 0 -1.19209e-07" shapeId="14" visibility="false" nodeId="56" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="6"/>
-              <Shape name="fensterVorneLinksAusschnitt.005" translation="0 0.58 0.00249994" shapeId="15" clipDistance="300" nodeId="57" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
+          <TransformGroup name="doorAngel.003" translation="-1.505 -1.25 -1.76" nodeId="55">
+            <Shape name="door.003" translation="0.7225 0 0" shapeId="14" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="56" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
+              <Shape name="fensterVorneLinksAusschnitt.004" translation="0 0 -1.19209e-07" shapeId="15" visibility="false" nodeId="57" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="3"/>
+              <Shape name="fensterVorneLinksAusschnitt.005" translation="0 0.58 0.00249994" shapeId="16" clipDistance="300" nodeId="58" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
             </Shape>
           </TransformGroup>
-          <TransformGroup name="doorAngel.004" translation="1.505 -1.25 -1.76" nodeId="58">
-            <Shape name="door.004" translation="-0.7225 0 0" shapeId="13" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="59" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
-              <Shape name="fensterVorneLinksAusschnitt.006" translation="0 0 -1.19209e-07" shapeId="14" visibility="false" nodeId="60" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="6"/>
-              <Shape name="fensterVorneLinksAusschnitt.007" translation="0 0.58 0.00249994" shapeId="15" clipDistance="300" nodeId="61" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
+          <TransformGroup name="doorAngel.004" translation="1.505 -1.25 -1.76" nodeId="59">
+            <Shape name="door.004" translation="-0.7225 0 0" shapeId="14" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="60" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="2">
+              <Shape name="fensterVorneLinksAusschnitt.006" translation="0 0 -1.19209e-07" shapeId="15" visibility="false" nodeId="61" castsShadows="false" receiveShadows="false" nonRenderable="true" buildNavMeshMask="0xff" materialIds="3"/>
+              <Shape name="fensterVorneLinksAusschnitt.007" translation="0 0.58 0.00249994" shapeId="16" clipDistance="300" nodeId="62" castsShadows="true" receiveShadows="true" buildNavMeshMask="0xff" materialIds="7"/>
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" shapeId="16" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="8"/>
-        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="17" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="seitenwand.001" translation="-1.5775 2.3 1.68" shapeId="17" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="seitenwand.002" translation="1.5775 2.3 1.68" shapeId="18" kinematic="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" nodeId="64" castsShadows="true" receiveShadows="true" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>

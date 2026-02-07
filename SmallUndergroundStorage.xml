@@ -143,11 +143,11 @@
         <i3dMapping id="warningStripes02Start" node="0>5|1"/>
         
         <i3dMapping id="aufzugTrigger" node="0>6|1"/>
-        <i3dMapping id="movingPart" node="0>6|0|2"/>
-        <i3dMapping id="doorAngel.001" node="0>6|0|2|5|0"/>
-        <i3dMapping id="doorAngel.002" node="0>6|0|2|5|1"/>
-        <i3dMapping id="doorAngel.003" node="0>6|0|2|5|2"/>
-        <i3dMapping id="doorAngel.004" node="0>6|0|2|5|3"/>
+        <i3dMapping id="movingPart" node="0>6|0|1"/>
+        <i3dMapping id="doorAngel.001" node="0>6|0|1|6|0"/>
+        <i3dMapping id="doorAngel.002" node="0>6|0|1|6|1"/>
+        <i3dMapping id="doorAngel.003" node="0>6|0|1|6|2"/>
+        <i3dMapping id="doorAngel.004" node="0>6|0|1|6|3"/>
         
         <i3dMapping id="indoorArea1Start" node="0>8|0"/>
         <i3dMapping id="indoorArea1Width" node="0>8|0|0"/>
