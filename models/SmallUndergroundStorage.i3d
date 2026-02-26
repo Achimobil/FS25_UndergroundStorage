@@ -77,7 +77,7 @@
           <TransformGroup name="levelArea1Height" translation="0 0 -22" nodeId="36"/>
         </TransformGroup>
       </TransformGroup>
-      <Shape name="infoTrigger" translation="0 2 0" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="37" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
+      <Shape name="infoTrigger" translation="0 2 0" scale="3.14765 1 6.79607" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="37" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
       <TransformGroup name="tipOcclusionUpdateAreas" nodeId="38">
         <TransformGroup name="tipOcclusionUpdateArea1Start" translation="7 0 11" nodeId="39">
           <TransformGroup name="tipOcclusionUpdateArea1End" translation="-14 0 -22" nodeId="40"/>

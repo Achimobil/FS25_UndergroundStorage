@@ -105,7 +105,7 @@
         </animatedObject>
     </animatedObjects>
     
-    <objectStorage supportsBales="true" supportsPallets="true" maxLength="8.5" maxWidth="6" maxHeight="10" capacity="200000" maxUnloadAmount="36">
+    <objectStorage supportsBales="true" supportsPallets="true" maxLength="2.7" maxWidth="5" maxHeight="10" capacity="200000" maxUnloadAmount="36">
         <playerTrigger node="playerTrigger"/>
         <objectTrigger node="objectTrigger"/>
         <spawnAreas>
