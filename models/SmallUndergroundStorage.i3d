@@ -2,12 +2,36 @@
 
 <i3D name="SmallUndergroundStorage.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+    <Export program="GIANTS Editor 64bit" version="10.0.13"/>
   </Asset>
 
   <Files>
     <File fileId="6" filename="$data/maps/mapAS/textures/props/powerDistributor/powerDistributor03.i3d"/>
+    <File fileId="21" filename="$data/objects/bigBagPallet/bigBagPalletAlpha_diffuse.png"/>
+    <File fileId="22" filename="$data/objects/bigBagPallet/bigBagPalletAlpha_normal.png"/>
+    <File fileId="23" filename="$data/objects/bigBagPallet/bigBagPalletAlpha_specular.png"/>
+    <File fileId="19" filename="$data/objects/bigBagPallet/bigBagPallet_normal.png"/>
+    <File fileId="20" filename="$data/objects/bigBagPallet/bigBagPallet_specular.png"/>
+    <File fileId="36" filename="$data/objects/pallets/cementBricksPallet/cementBricksPallet_diffuse.png"/>
+    <File fileId="37" filename="$data/objects/pallets/cementBricksPallet/cementBricksPallet_normal.png"/>
+    <File fileId="38" filename="$data/objects/pallets/cementBricksPallet/cementBricksPallet_specular.png"/>
+    <File fileId="30" filename="$data/objects/pallets/liquidTank/fertilizerTank_diffuse.png"/>
+    <File fileId="31" filename="$data/objects/pallets/liquidTank/fertilizerTank_normal.png"/>
+    <File fileId="32" filename="$data/objects/pallets/liquidTank/fertilizerTank_specular.png"/>
+    <File fileId="33" filename="$data/objects/pallets/liquidTank/helmDecal_diffuse.png"/>
+    <File fileId="15" filename="$data/objects/pallets/paperRollPallet/paperRollPallet_diffuse.png"/>
+    <File fileId="16" filename="$data/objects/pallets/paperRollPallet/paperRollPallet_normal.png"/>
+    <File fileId="17" filename="$data/objects/pallets/paperRollPallet/paperRollPallet_specular.png"/>
+    <File fileId="24" filename="$data/objects/pallets/stonePallet/stonePalletFill_diffuse.png"/>
+    <File fileId="25" filename="$data/objects/pallets/stonePallet/stonePalletFill_normal.png"/>
+    <File fileId="26" filename="$data/objects/pallets/stonePallet/stonePalletFill_specular.png"/>
+    <File fileId="18" filename="$data/objects/pallets/stonePallet/stonePallet_diffuse.png"/>
+    <File fileId="27" filename="$data/objects/pallets/woolPallet/woolBag_diffuse.png"/>
+    <File fileId="28" filename="$data/objects/pallets/woolPallet/woolBag_normal.png"/>
+    <File fileId="29" filename="$data/objects/pallets/woolPallet/woolBag_specular.png"/>
     <File fileId="13" filename="$data/shaders/decalShader.xml"/>
+    <File fileId="34" filename="$data/shared/default_normal.png"/>
+    <File fileId="35" filename="$data/shared/default_specular.png"/>
     <File fileId="2" filename="$data/shared/warningStripes_diffuse.png"/>
     <File fileId="3" filename="$data/shared/warningStripes_normal.png"/>
     <File fileId="4" filename="$data/shared/warningStripes_specular.png"/>
@@ -22,22 +46,64 @@
 
 
   <Materials>
-    <Material name="chainlinkFence_mat" materialId="5">
+    <Material name="bigBagPalletAlpha_mat" materialId="1508">
+      <Texture fileId="21"/>
+      <Normalmap fileId="22"/>
+      <Glossmap fileId="23"/>
+    </Material>
+    <Material name="cementBricksPallet_mat" materialId="1509">
+      <Texture fileId="36"/>
+      <Normalmap fileId="37"/>
+      <Glossmap fileId="38"/>
+    </Material>
+    <Material name="chainlinkFence_mat" materialId="1510">
       <Texture fileId="7"/>
       <Normalmap fileId="8"/>
       <Glossmap fileId="9"/>
     </Material>
-    <Material name="chainlinkFenceAlpha_mat" materialId="6" alphaBlending="true" customShaderId="13">
+    <Material name="chainlinkFenceAlpha_mat" materialId="1511" alphaBlending="true" customShaderId="13">
       <Texture fileId="10"/>
       <Normalmap fileId="11"/>
       <Glossmap fileId="12"/>
     </Material>
-    <Material name="UnnamedMaterial" materialId="7" diffuseColor="1 1 1 1">
+    <Material name="default" materialId="1512" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
-    <Material name="warningStripes_mat" materialId="8">
+    <Material name="fertilizerTank_mat" materialId="1514">
+      <Texture fileId="30"/>
+      <Normalmap fileId="31"/>
+      <Glossmap fileId="32"/>
+    </Material>
+    <Material name="helmDecal_mat" materialId="1515" alphaBlending="true" customShaderId="13">
+      <Texture fileId="33"/>
+      <Normalmap fileId="34"/>
+      <Glossmap fileId="35"/>
+    </Material>
+    <Material name="paperRollPallet_mat" materialId="1516">
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
+    </Material>
+    <Material name="stonePallet_mat" materialId="1517">
+      <Texture fileId="18"/>
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="20"/>
+    </Material>
+    <Material name="stonePalletFill_mat" materialId="1518">
+      <Texture fileId="24"/>
+      <Normalmap fileId="25"/>
+      <Glossmap fileId="26"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="1519" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="warningStripes_mat" materialId="1520">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
+    </Material>
+    <Material name="woolBag_mat" materialId="1521">
+      <Texture fileId="27"/>
+      <Normalmap fileId="28"/>
+      <Glossmap fileId="29"/>
     </Material>
   </Materials>
 
@@ -46,83 +112,516 @@
   </Shapes>
 
   <Scene>
-    <TransformGroup name="mainComponent" nodeId="17">
-      <TransformGroup name="objectStorage" nodeId="18">
-        <TransformGroup name="spawnAreas" nodeId="19">
-          <TransformGroup name="spawnArea1Start" translation="-3.64 0 -7.76" rotation="0 -90 0" nodeId="20">
-            <TransformGroup name="spawnArea1End" translation="15.52 0 2.7" rotation="-0 180 0" nodeId="21"/>
+    <TransformGroup name="mainComponent" nodeId="1552">
+      <TransformGroup name="objectStorage" nodeId="1553">
+        <TransformGroup name="spawnAreas" nodeId="1554">
+          <TransformGroup name="spawnArea1Start" translation="-3.64 0 -7.76" rotation="0 -90 0" nodeId="1555">
+            <TransformGroup name="spawnArea1End" translation="15.52 0 2.7" rotation="-0 180 0" nodeId="1556"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="storageAreas" nodeId="22">
-          <TransformGroup name="storageArea1Start" translation="-1.7 0 9.4" rotation="0 90 0" nodeId="23">
-            <TransformGroup name="storageArea1End" translation="7.6 0 3.5" nodeId="24"/>
+        <TransformGroup name="storageAreas" nodeId="1557">
+          <TransformGroup name="storageArea1Start" translation="-1.7 0 9.4" rotation="0 90 0" nodeId="1558">
+            <TransformGroup name="storageArea1End" translation="7.6 0 3.5" nodeId="1559"/>
           </TransformGroup>
         </TransformGroup>
-        <Shape name="playerTrigger" translation="-3 1 0" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" nodeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7">
-          <TransformGroup name="playerTriggerMarker" nodeId="26"/>
+        <Shape name="playerTrigger" translation="-3 1 0" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" nodeId="1560" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1519">
+          <TransformGroup name="playerTriggerMarker" nodeId="1561"/>
         </Shape>
-        <Shape name="objectTrigger" translation="5.15923 2.00003 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x50000" nodeId="27" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7">
-          <TransformGroup name="objectTriggerMarker" nodeId="28"/>
-        </Shape>
-      </TransformGroup>
-      <TransformGroup name="clearAreas" translation="9 0 11" nodeId="29">
-        <TransformGroup name="clearArea1Start" nodeId="30">
-          <TransformGroup name="clearArea1Width" translation="-18 0 0" nodeId="31"/>
-          <TransformGroup name="clearArea1Height" translation="0 0 -22" nodeId="32"/>
-        </TransformGroup>
-      </TransformGroup>
-      <TransformGroup name="levelAreas" translation="9 0 11" nodeId="33">
-        <TransformGroup name="levelArea1Start" nodeId="34">
-          <TransformGroup name="levelArea1Width" translation="-18 0 0" nodeId="35"/>
-          <TransformGroup name="levelArea1Height" translation="0 0 -22" nodeId="36"/>
-        </TransformGroup>
-      </TransformGroup>
-      <Shape name="infoTrigger" translation="0 2 0" scale="3.14765 1 6.79607" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="37" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
-      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="38">
-        <TransformGroup name="tipOcclusionUpdateArea1Start" translation="7 0 11" nodeId="39">
-          <TransformGroup name="tipOcclusionUpdateArea1End" translation="-14 0 -22" nodeId="40"/>
-        </TransformGroup>
-      </TransformGroup>
-      <TransformGroup name="warningStripes" translation="0 0.01 0" nodeId="41">
-        <Shape name="warningStripes01Start" translation="4 0 0" shapeId="4" clipDistance="200" nodeId="42" castsShadows="true" receiveShadows="true" materialIds="8">
-          <Shape name="warningStripes01End" translation="3 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="8"/>
-        </Shape>
-        <Shape name="warningStripes02Start" translation="-3.8 0 -1.13234e-06" rotation="0 180 0" shapeId="4" clipDistance="200" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="8">
-          <Shape name="warningStripes02End" translation="2.98 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="objectTrigger" translation="5.159 2.00003 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x50000" nodeId="1562" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="1519">
+          <TransformGroup name="objectTriggerMarker" nodeId="1563"/>
         </Shape>
       </TransformGroup>
-      <TransformGroup name="building2" translation="1.86818e-07 0.01 -6" rotation="0 180 0" nodeId="46">
-        <ReferenceNode name="Aufzug" translation="7.0537e-07 0 3.7373e-14" referenceId="5" nodeId="74"/>
-        <Shape name="aufzugTrigger" translation="9.34383e-07 1.2844 -5.49136" rotation="180 2.50448e-06 180" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="109" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
-      </TransformGroup>
-      <TransformGroup name="deko" nodeId="110">
-        <TransformGroup name="pfosten" translation="0 0 -6" nodeId="111">
-          <ReferenceNode name="bollard01" translation="2 0 6" rotation="0 180 0" referenceId="6" nodeId="117"/>
-          <ReferenceNode name="bollard01" translation="-2 0 6" referenceId="6" nodeId="122"/>
-          <ReferenceNode name="bollard01" translation="2 0 3" rotation="0 180 0" referenceId="6" nodeId="127"/>
-          <ReferenceNode name="bollard01" translation="-2 0 3" referenceId="6" nodeId="132"/>
-          <ReferenceNode name="bollard01" translation="2 0 -3.5" rotation="0 180 0" referenceId="6" nodeId="137"/>
-          <ReferenceNode name="bollard01" translation="-2 0 -3.5" referenceId="6" nodeId="142"/>
-        </TransformGroup>
-        <TransformGroup name="zaun" translation="0 0 -0.5" nodeId="147">
-          <Shape name="lowerPartShort" lockedgroup="true" translation="1.88243 -3.04122e-27 10.0096" rotation="9.25663e-26 90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="148" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="6"/>
-          </Shape>
-          <Shape name="lowerPartShort" lockedgroup="true" translation="1.93 -1.62535e-26 1.91" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="150" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="151" castsShadows="true" receiveShadows="true" materialIds="6"/>
-          </Shape>
-          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.85 -2.94439e-26 9.89" rotation="9.25663e-26 0 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="152" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="153" castsShadows="true" receiveShadows="true" materialIds="6"/>
-          </Shape>
-          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.80753 -9.00266e-27 1.79" rotation="9.25663e-26 -90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="154" castsShadows="true" receiveShadows="true" materialIds="5">
-            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="155" castsShadows="true" receiveShadows="true" materialIds="6"/>
-          </Shape>
+      <TransformGroup name="clearAreas" translation="9 0 11" nodeId="1564">
+        <TransformGroup name="clearArea1Start" nodeId="1565">
+          <TransformGroup name="clearArea1Width" translation="-18 0 0" nodeId="1566"/>
+          <TransformGroup name="clearArea1Height" translation="0 0 -22" nodeId="1567"/>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="indoorAreas" translation="1.951 0 -4.05246" nodeId="156">
-        <TransformGroup name="indoorArea1Start" nodeId="157">
-          <TransformGroup name="indoorArea1Width" translation="-3.9 0 0" nodeId="158"/>
-          <TransformGroup name="indoorArea1Height" translation="0 0 -3.9" nodeId="159"/>
+      <TransformGroup name="levelAreas" translation="9 0 11" nodeId="1568">
+        <TransformGroup name="levelArea1Start" nodeId="1569">
+          <TransformGroup name="levelArea1Width" translation="-18 0 0" nodeId="1570"/>
+          <TransformGroup name="levelArea1Height" translation="0 0 -22" nodeId="1571"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="infoTrigger" translation="0 2 0" scale="3.14765 1 6.79607" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="1572" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="1519"/>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="1573">
+        <TransformGroup name="tipOcclusionUpdateArea1Start" translation="7 0 11" nodeId="1574">
+          <TransformGroup name="tipOcclusionUpdateArea1End" translation="-14 0 -22" nodeId="1575"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="warningStripes" translation="0 0.01 0" nodeId="1576">
+        <Shape name="warningStripes01Start" translation="4 0 0" shapeId="4" clipDistance="200" nodeId="1577" castsShadows="true" receiveShadows="true" materialIds="1520">
+          <Shape name="warningStripes01End" translation="3 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="1578" castsShadows="true" receiveShadows="true" materialIds="1520"/>
+        </Shape>
+        <Shape name="warningStripes02Start" translation="-3.8 0 -1.13234e-06" rotation="0 180 0" shapeId="4" clipDistance="200" nodeId="1579" castsShadows="true" receiveShadows="true" materialIds="1520">
+          <Shape name="warningStripes02End" translation="2.98 0 -9.0003e-05" shapeId="5" clipDistance="200" nodeId="1580" castsShadows="true" receiveShadows="true" materialIds="1520"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="building2" translation="1.86818e-07 0.01 -6" rotation="0 180 0" nodeId="1581">
+        <ReferenceNode name="Aufzug" translation="7.0537e-07 0 3.7373e-14" referenceId="5" nodeId="1608"/>
+        <Shape name="aufzugTrigger" translation="9.34383e-07 1.2844 -5.49136" rotation="180 2.50448e-06 180" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="1643" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="1519"/>
+      </TransformGroup>
+      <TransformGroup name="deko" nodeId="1644">
+        <TransformGroup name="pfosten" translation="0 0 -6" nodeId="1645">
+          <ReferenceNode name="bollard01" translation="2 0 6" rotation="0 180 0" referenceId="6" nodeId="1651"/>
+          <ReferenceNode name="bollard01" translation="-2 0 6" referenceId="6" nodeId="1656"/>
+          <ReferenceNode name="bollard01" translation="2 0 3" rotation="0 180 0" referenceId="6" nodeId="1661"/>
+          <ReferenceNode name="bollard01" translation="-2 0 3" referenceId="6" nodeId="1666"/>
+          <ReferenceNode name="bollard01" translation="2 0 -3.5" rotation="0 180 0" referenceId="6" nodeId="1671"/>
+          <ReferenceNode name="bollard01" translation="-2 0 -3.5" referenceId="6" nodeId="1676"/>
+        </TransformGroup>
+        <TransformGroup name="zaun" translation="0 0 -0.5" nodeId="1681">
+          <Shape name="lowerPartShort" lockedgroup="true" translation="1.88243 -3.04122e-27 10.0096" rotation="9.25663e-26 90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="1682" castsShadows="true" receiveShadows="true" materialIds="1510">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="1683" castsShadows="true" receiveShadows="true" materialIds="1511"/>
+          </Shape>
+          <Shape name="lowerPartShort" lockedgroup="true" translation="1.93 -1.62535e-26 1.91" rotation="9.25663e-26 180 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="1684" castsShadows="true" receiveShadows="true" materialIds="1510">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="1685" castsShadows="true" receiveShadows="true" materialIds="1511"/>
+          </Shape>
+          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.85 -2.94439e-26 9.89" rotation="9.25663e-26 0 0" scale="1 1 1.36798" shapeId="6" static="true" clipDistance="300" nodeId="1686" castsShadows="true" receiveShadows="true" materialIds="1510">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="1687" castsShadows="true" receiveShadows="true" materialIds="1511"/>
+          </Shape>
+          <Shape name="lowerPartShort" lockedgroup="true" translation="-1.80753 -9.00266e-27 1.79" rotation="9.25663e-26 -90 0" scale="1 1 0.63" shapeId="6" static="true" clipDistance="300" nodeId="1688" castsShadows="true" receiveShadows="true" materialIds="1510">
+            <Shape name="lowerPartShortAlpha" translation="-1 2.43837 -5.911" shapeId="7" static="true" collisionFilterGroup="0x103c" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="1689" castsShadows="true" receiveShadows="true" materialIds="1511"/>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="indoorAreas" translation="1.951 0 -4.05246" nodeId="1690">
+        <TransformGroup name="indoorArea1Start" nodeId="1691">
+          <TransformGroup name="indoorArea1Width" translation="-3.9 0 0" nodeId="1692"/>
+          <TransformGroup name="indoorArea1Height" translation="0 0 -3.9" nodeId="1693"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="silo" nodeId="1694">
+        <TransformGroup name="unloadingStation" nodeId="1695">
+          <Shape name="exactFillRootNode" translation="5.159 0 0" shapeId="2" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="1696" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="1519"/>
+          <TransformGroup name="aiUnloadingNode" translation="5.159 0 0" nodeId="1697"/>
+          <Shape name="palletTrigger" translation="5.159 2.00003 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" nodeId="1979" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="1519"/>
+        </TransformGroup>
+        <TransformGroup name="spawnPlaces" translation="-3.54 0 -7.16" nodeId="1698">
+          <TransformGroup name="spawnPlace1Start" nodeId="1699">
+            <TransformGroup name="spawnPlace1End" translation="-3.01 0 0" nodeId="1700"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace2Start" translation="0 0 1.3" nodeId="1701">
+            <TransformGroup name="spawnPlace2End" translation="-3.01 0 0" nodeId="1702"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace3Start" translation="0 0 2.6" nodeId="1703">
+            <TransformGroup name="spawnPlace3End" translation="-3.01 0 0" nodeId="1704"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace4Start" translation="0 0 3.9" nodeId="1705">
+            <TransformGroup name="spawnPlace4End" translation="-3.01 0 0" nodeId="1706"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace5Start" translation="0 0 5.2" nodeId="1707">
+            <TransformGroup name="spawnPlace5End" translation="-3.01 0 0" nodeId="1708"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace6Start" translation="0 0 6.5" nodeId="1709">
+            <TransformGroup name="spawnPlace6End" translation="-3.01 0 0" nodeId="1710"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace7Start" translation="0 0 7.8" nodeId="1711">
+            <TransformGroup name="spawnPlace7End" translation="-3.01 0 0" nodeId="1712"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace8Start" translation="0 0 9.1" nodeId="1713">
+            <TransformGroup name="spawnPlace8End" translation="-3.01 0 0" nodeId="1714"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace9Start" translation="0 0 10.4" nodeId="1715">
+            <TransformGroup name="spawnPlace9End" translation="-3.01 0 0" nodeId="1716"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace10Start" translation="0 0 11.7" nodeId="1717">
+            <TransformGroup name="spawnPlace10End" translation="-3.01 0 0" nodeId="1718"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace11Start" translation="0 0 13" nodeId="1719">
+            <TransformGroup name="spawnPlace11End" translation="-3.01 0 0" nodeId="1720"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlace12Start" translation="0 0 14.3" nodeId="1721">
+            <TransformGroup name="spawnPlace12End" translation="-3.01 0 0" nodeId="1722"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="siloDeko" nodeId="1723">
+          <Shape name="paperRollPallet_main_component1" translation="1.14001 -0.126724 8.67984" shapeId="8" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1724" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1725">
+              <Shape name="paperRoll" shapeId="9" clipDistance="100" nodeId="1726" castsShadows="true" receiveShadows="true" materialIds="1516">
+                <Shape name="paperRollTension" shapeId="10" nodeId="1727" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+          <Shape name="paperRollPallet_main_component1" translation="-0.42002 -0.126724 8.67984" shapeId="8" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1728" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1729">
+              <Shape name="paperRoll" shapeId="9" clipDistance="100" nodeId="1730" castsShadows="true" receiveShadows="true" materialIds="1516">
+                <Shape name="paperRollTension" shapeId="10" nodeId="1731" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+          <Shape name="paperRollPallet_main_component1" translation="0.372351 1.41754 8.67984" shapeId="8" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1732" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1733">
+              <Shape name="paperRoll" shapeId="9" clipDistance="100" nodeId="1734" castsShadows="true" receiveShadows="true" materialIds="1516">
+                <Shape name="paperRollTension" shapeId="10" nodeId="1735" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+          <Shape name="bigBagContainer_main_component1" translation="1.23115 4.18351e-08 6.36141" rotation="-2.8897e-11 90 1.73028e-05" shapeId="11" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.1" clipDistance="300" nodeId="1736" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1737">
+              <Shape name="bigBagContainer_vis" shapeId="12" clipDistance="300" nodeId="1738" castsShadows="true" receiveShadows="true" materialIds="1517">
+                <Shape name="tensionBeltShape" translation="0 0.001731 0" shapeId="13" nodeId="1739" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+                <Shape name="grid" shapeId="14" nodeId="1740" castsShadows="true" receiveShadows="true" materialIds="1508"/>
+                <Shape name="fill" translation="0 0.568082 0" shapeId="15" clipDistance="100" nodeId="1741" castsShadows="true" receiveShadows="true" materialIds="1518"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+          <Shape name="bigBagContainer_main_component1" translation="1.23115 1.07744 6.36141" rotation="-2.8897e-11 90 1.73028e-05" shapeId="11" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.1" clipDistance="300" nodeId="1742" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1743">
+              <Shape name="bigBagContainer_vis" shapeId="12" clipDistance="300" nodeId="1744" castsShadows="true" receiveShadows="true" materialIds="1517">
+                <Shape name="tensionBeltShape" translation="0 0.001731 0" shapeId="13" nodeId="1745" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+                <Shape name="grid" shapeId="14" nodeId="1746" castsShadows="true" receiveShadows="true" materialIds="1508"/>
+                <Shape name="fill" translation="0 0.568082 0" shapeId="15" clipDistance="100" nodeId="1747" castsShadows="true" receiveShadows="true" materialIds="1518"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 -0.121442 1.96641" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1748" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1749">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1750" castsShadows="true" receiveShadows="true" skinBindNodeIds="1750 1752 1754 1756" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1751" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1752">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1753" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1754">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1755" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1756">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1757" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 -0.121442 2.72588" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1758" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1759">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1760" castsShadows="true" receiveShadows="true" skinBindNodeIds="1760 1762 1764 1766" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1761" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1762">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1763" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1764">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1765" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1766">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1767" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 -0.121442 3.51055" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1768" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1769">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1770" castsShadows="true" receiveShadows="true" skinBindNodeIds="1770 1772 1774 1776" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1771" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1772">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1773" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1774">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1775" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1776">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1777" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 -0.121442 4.27039" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1778" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1779">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1780" castsShadows="true" receiveShadows="true" skinBindNodeIds="1780 1782 1784 1786" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1781" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1782">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1783" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1784">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1785" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1786">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1787" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 0.979038 2.43066" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1788" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1789">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1790" castsShadows="true" receiveShadows="true" skinBindNodeIds="1790 1792 1794 1796" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1791" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1792">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1793" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1794">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1795" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1796">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1797" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 0.979038 3.24575" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1798" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1799">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1800" castsShadows="true" receiveShadows="true" skinBindNodeIds="1800 1802 1804 1806" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1801" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1802">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1803" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1804">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1805" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1806">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1807" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="woolPallet_component1" translation="1.28554 0.979038 4.06553" shapeId="16" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="1808" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="content" nodeId="1809">
+              <Shape name="woolBag01" translation="-0.309047 0.144671 0" shapeId="17" clipDistance="120" nodeId="1810" castsShadows="true" receiveShadows="true" skinBindNodeIds="1810 1812 1814 1816" materialIds="1521">
+                <Shape name="woolBag_Tension01" shapeId="18" nodeId="1811" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </Shape>
+              <TransformGroup name="woolBag02" translation="0.26846 0.144671 0" clipDistance="120" nodeId="1812">
+                <Shape name="woolBag_Tension02" translation="0.006842 0 0" shapeId="18" nodeId="1813" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag03" translation="-0.309047 0.679778 0" clipDistance="120" nodeId="1814">
+                <Shape name="woolBag_Tension03" translation="0 0.001428 0" shapeId="18" nodeId="1815" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="woolBag04" translation="0.26846 1.22777 0" rotation="180 0 0" clipDistance="120" nodeId="1816">
+                <Shape name="woolBag_Tension04" translation="0.006842 0.524405 0.001556" rotation="180 0 0" shapeId="18" nodeId="1817" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="fertilizerTank_main_component1" translation="-1.00314 0 2.094" rotation="0 2.8094 0" shapeId="19" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.07" clipDistance="200" nodeId="1818" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="configurations" nodeId="1819">
+              <Shape name="helmConfiguration" shapeId="20" nodeId="1820" castsShadows="true" receiveShadows="true" materialIds="1514">
+                <Shape name="decalHelmLiquidHerbicide" shapeId="21" clipDistance="60" nodeId="1821" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="1515"/>
+                <Shape name="decalHelmLiquidFertilizer" shapeId="22" clipDistance="60" nodeId="1822" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="1515"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="visible" nodeId="1823">
+              <Shape name="fertilizerTank_vis" shapeId="23" nodeId="1824" castsShadows="true" receiveShadows="true" materialIds="1514"/>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 -0.149789 4.27968" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1825" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1826">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1827">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1828">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1829" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1830" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1831" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1832">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1833">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1834" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1835" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1836" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1837">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1838">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1839" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1840" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1841" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1842">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1843">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1844" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1845" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1846" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 -0.149789 5.04764" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1847" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1848">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1849">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1850">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1851" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1852" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1853" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1854">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1855">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1856" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1857" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1858" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1859">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1860">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1861" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1862" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1863" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1864">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1865">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1866" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1867" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1868" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 -0.149789 5.81003" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1869" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1870">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1871">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1872">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1873" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1874" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1875" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1876">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1877">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1878" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1879" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1880" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1881">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1882">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1883" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1884" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1885" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1886">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1887">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1888" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1889" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1890" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 -0.149789 6.57706" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1891" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1892">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1893">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1894">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1895" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1896" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1897" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1898">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1899">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1900" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1901" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1902" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1903">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1904">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1905" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1906" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1907" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1908">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1909">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1910" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1911" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1912" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 0.606423 6.38417" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1913" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1914">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1915">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1916">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1917" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1918" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1919" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1920">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1921">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1922" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1923" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1924" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1925">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1926">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1927" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1928" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1929" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1930">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1931">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1932" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1933" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1934" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 0.606423 5.63591" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1935" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1936">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1937">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1938">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1939" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1940" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1941" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1942">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1943">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1944" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1945" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1946" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1947">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1948">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1949" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1950" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1951" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1952">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1953">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1954" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1955" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1956" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="cementBricksPallet_component1" translation="-1.24379 0.606423 4.867" shapeId="24" static="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" clipDistance="300" nodeId="1957" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512">
+            <TransformGroup name="contents" nodeId="1958">
+              <TransformGroup name="cementBricks01" translation="0 0.138566 0" nodeId="1959">
+                <TransformGroup name="cementBricks01_lod" lodDistance="0 15" nodeId="1960">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1961" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1962" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension01" translation="0 0.098053 0.000689" shapeId="27" nodeId="1963" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks02" translation="0 0.328567 0" rotation="0 180 0" nodeId="1964">
+                <TransformGroup name="cementBricks02_lod" lodDistance="0 15" nodeId="1965">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1966" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1967" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension02" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1968" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks03" translation="0 0.518567 0" nodeId="1969">
+                <TransformGroup name="cementBricks03_lod" lodDistance="0 15" nodeId="1970">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1971" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1972" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension03" translation="0 0.098 0.000689" shapeId="27" nodeId="1973" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+              <TransformGroup name="cementBricks04" translation="0 0.708568 0" rotation="0 180 0" nodeId="1974">
+                <TransformGroup name="cementBricks04_lod" lodDistance="0 15" nodeId="1975">
+                  <Shape name="cementBricks_lod0" translation="0 1e-06 0" shapeId="25" clipDistance="100" nodeId="1976" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                  <Shape name="cementBricks_lod1" translation="0 1e-06 0" shapeId="26" clipDistance="300" nodeId="1977" castsShadows="true" receiveShadows="true" materialIds="1509"/>
+                </TransformGroup>
+                <Shape name="cementBricks_Tension04" translation="0 0.098 -0.000689" rotation="0 180 0" shapeId="27" nodeId="1978" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1512"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
         </TransformGroup>
       </TransformGroup>
     </TransformGroup>

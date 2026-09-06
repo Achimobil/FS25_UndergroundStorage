@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<placeable type="objectStorage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+<placeable type="FS25_0_ProductionRevamp.RevampSilo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
     <storeData>
-        <name>$l10n_storeItem_objectStorage</name>
+        <name>$l10n_storeItem_undergroundPalletSilo</name>
         <functions>
-            <function>$l10n_function_objectStorage</function>
+            <function>$l10n_function_farmSilo</function>
         </functions>
         <image>store_smallUndergroundStorage.png</image>
         <price>25000</price>
@@ -27,10 +27,6 @@
         <boughtWithFarmland>true</boughtWithFarmland>
         <canBeRenamed>true</canBeRenamed>
     </base>
-
-    <deletedNodes>
-        <deletedNode node="siloDeko"/>
-    </deletedNodes>
 
     <clearAreas>
         <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
@@ -109,22 +105,46 @@
         </animatedObject>
     </animatedObjects>
 
-    <objectStorage supportsBales="true" supportsPallets="true" maxLength="2.7" maxWidth="5" maxHeight="10" capacity="200000" maxUnloadAmount="36">
-        <playerTrigger node="playerTrigger"/>
-        <objectTrigger node="objectTrigger"/>
-        <spawnAreas>
-            <spawnArea startNode="spawnArea1Start" endNode="spawnArea1End" maxHeight="4"/>
-        </spawnAreas>
-        <storageAreas>
-            <storageArea startNode="storageArea1Start" endNode="storageArea1End" maxHeight="4"/>
-        </storageAreas>
-    </objectStorage>
+    <silo>
+        <!-- Verladestation ohne Trigger, nur für die Anzeige am Gebäude: der Info-Kasten liest seine Werte über die Verladestation,
+             und die nimmt das Lager nur dann als Quelle an, wenn sie dessen Fülltypen kennt -->
+        <loadingStation fillTypeCategories="PRODUCT SELLINGSTATION_BALES" storageRadius="0"/>
+
+        <unloadingStation>
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypeCategories="PRODUCT SELLINGSTATION_BALES" aiNode="aiUnloadingNode"/>
+            <baleTrigger triggerNode="objectTrigger" fillTypeCategories="SELLINGSTATION_BALES"/>
+            <palletTrigger triggerNode="palletTrigger" fillTypeCategories="PRODUCT"/>
+        </unloadingStation>
+
+        <storages>
+            <storage fillTypeCategories="PRODUCT SELLINGSTATION_BALES" capacity="200000000"/>
+        </storages>
+    </silo>
+
+    <revampObjectFillLevels>
+        <revampObjectFillLevel rootNode="siloDeko" fillTypeCategories="PRODUCT" maxAtFillLevel="2000000"/>
+    </revampObjectFillLevels>
+
+    <revampSpawner triggerNode="playerTrigger">
+        <palletSpawner>
+            <spawnPlaces>
+                <spawnPlace startNode="spawnPlace1Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace2Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace3Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace4Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace5Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace6Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace7Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace8Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace9Start"  maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace10Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace11Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace12Start" maxHeight="4" palletRotationOffset="90"/>
+            </spawnPlaces>
+        </palletSpawner>
+    </revampSpawner>
 
     <i3dMappings>        
-        <i3dMapping id="spawnArea1Start" node="0>0|0|0"/>
-        <i3dMapping id="spawnArea1End" node="0>0|0|0|0"/>
-        <i3dMapping id="storageArea1Start" node="0>0|1|0"/>
-        <i3dMapping id="storageArea1End" node="0>0|1|0|0"/>
         <i3dMapping id="playerTrigger" node="0>0|2"/>
         <i3dMapping id="playerTriggerMarker" node="0>0|2|0"/>
         <i3dMapping id="objectTrigger" node="0>0|3"/>
@@ -157,6 +177,22 @@
         <i3dMapping id="indoorArea1Width" node="0>8|0|0"/>
         <i3dMapping id="indoorArea1Height" node="0>8|0|1"/>
 
+        <i3dMapping id="exactFillRootNode" node="0>9|0|0"/>
+        <i3dMapping id="aiUnloadingNode" node="0>9|0|1"/>
+        <i3dMapping id="palletTrigger" node="0>9|0|2"/>
         <i3dMapping id="siloDeko" node="0>9|2"/>
+
+        <i3dMapping id="spawnPlace1Start" node="0>9|1|0"/>
+        <i3dMapping id="spawnPlace2Start" node="0>9|1|1"/>
+        <i3dMapping id="spawnPlace3Start" node="0>9|1|2"/>
+        <i3dMapping id="spawnPlace4Start" node="0>9|1|3"/>
+        <i3dMapping id="spawnPlace5Start" node="0>9|1|4"/>
+        <i3dMapping id="spawnPlace6Start" node="0>9|1|5"/>
+        <i3dMapping id="spawnPlace7Start" node="0>9|1|6"/>
+        <i3dMapping id="spawnPlace8Start" node="0>9|1|7"/>
+        <i3dMapping id="spawnPlace9Start" node="0>9|1|8"/>
+        <i3dMapping id="spawnPlace10Start" node="0>9|1|9"/>
+        <i3dMapping id="spawnPlace11Start" node="0>9|1|10"/>
+        <i3dMapping id="spawnPlace12Start" node="0>9|1|11"/>
     </i3dMappings>
 </placeable>

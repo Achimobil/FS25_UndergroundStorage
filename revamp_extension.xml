@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Anmeldung bei Production Revamp. Diese Datei liest nur Revamp - ist der Mod nicht installiert, existiert die darin genannte Placeable für das Spiel gar nicht.
+     Deshalb steht sie hier und nicht als storeItem in der modDesc: dort würde ihr Revamp-Placeable-Typ ohne Revamp eine Fehlerzeile im Log erzeugen. -->
+<revampExtension>
+    <storeItems>
+        <storeItem xmlFilename="SmallUndergroundStorageRevamp.xml"/>
+    </storeItems>
+</revampExtension>

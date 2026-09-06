@@ -1,18 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="106">
     <author>Achimobil</author>
-    <version>1.0.2.1</version>
-    
+    <version>1.0.2.2</version>
+
     <title>
         <en>Underground Storage</en>
         <de>Unterirdisches Lager</de>
         <it>Stoccaggio Sotterraneo</it>
         <ru>Подземное Хранилище</ru>
     </title>
-    
+
     <description>
-        <en>
-            <![CDATA[Small access area to the underground storage facility for pallets and bales.
+        <de><![CDATA[Kleiner Zugangsbereich zum unterirdischen Lager für Paletten und Ballen.
+
+Es handelt sich um ein standard Objekt Lager.
+Alle Ballen und Paletten können hier eingelagert werden.
+Silage Ballen gären weiter.
+Der Aufzug muss manuall bedient werden, da Objektlager keine Animationen können.
+
+Shopkategorie: Getreidesilos
+Preis: 25.000€
+Täglicher Unterhalt: 120€
+Kapazität: 200.000 Ballen und Paletten
+
+Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
+Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
+
+Fehler und Anregungen gerne auf GitHub:
+https://github.com/Achimobil/FS25_UndergroundStorage
+
+Changelog:
+1.0.2.2 - Variante für Production Revamp als Silo wie im 22er
+1.0.2.1 - Das einlagern von Baumwollballen verhindert, da diese zu groß sind zum Auslagern und Infotrigger vergrößert
+
+1.0.2.0
+- Objekttrigger korrigiert
+- Trigger verkleinert und gedreht zur Optimierung beim Auslagern
+- Aufzug kann nicht mehr betreten werden um Unfälle zu vermeiden
+]]></de>
+        <en><![CDATA[Small access area to the underground storage facility for pallets and bales.
 
 This is a standard storage facility.
 All bales and pallets can be stored here.
@@ -36,39 +62,19 @@ Changelog:
 - Triggers reduced in size and rotated for optimisation during offloading
 - Block elevator entry for preventing accidents
 ]]></en>
-        <de>
-            <![CDATA[Kleiner Zugangsbereich zum unterirdischen Lager für Paletten und Ballen.
-
-Es handelt sich um ein standard Objekt Lager.
-Alle Ballen und Paletten können hier eingelagert werden.
-Silage Ballen gären weiter.
-Der Aufzug muss manuall bedient werden, da Objektlager keine Animationen können.
-
-Shopkategorie: Getreidesilos
-Preis: 25.000€
-Täglicher Unterhalt: 120€
-Kapazität: 200.000 Ballen und Paletten
-
-Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
-Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
-
-Fehler und Anregungen gerne auf GitHub:
-https://github.com/Achimobil/FS25_UndergroundStorage
-
-Changelog:
-1.0.2.1 - Das einlagern von Baumwollballen verindert, da diese zu groß sind zum Auslagern und Infotrigger vergrößert
-
-1.0.2.0
-- Objekttrigger korrigiert
-- Trigger verkleinert und gedreht zur Optimierung beim Auslagern
-- Aufzug kann nicht mehr betreten werden um Unfälle zu vermeiden
-]]></de>
     </description>
-    
+
+    <l10n>
+        <text name="storeItem_undergroundPalletSilo">
+            <en>Underground Pallet Silo</en>
+            <de>Unterirdisches Palettensilo</de>
+        </text>
+    </l10n>
+
     <multiplayer supported="true"/>
-    
-    <iconFilename>icon_UndergroundStorage.dds</iconFilename>
-    
+
+    <iconFilename>icon_UndergroundStorage.png</iconFilename>
+
     <storeItems>
         <storeItem xmlFilename="SmallUndergroundStorage.xml"/>
     </storeItems>

@@ -1,0 +1,1 @@
+"C:\Program Files\7-Zip\7z.exe" u -tzip "E:\LS25Profile\LS25ModTest\mods\FS25_UndergroundStorage.zip" -x@FileDefinition.txt
