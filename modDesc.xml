@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="106">
+<modDesc descVersion="113">
     <author>Achimobil</author>
-    <version>1.0.2.2</version>
+    <version>1.0.2.3</version>
 
     <title>
         <en>Underground Storage</en>
@@ -30,6 +30,7 @@ Fehler und Anregungen gerne auf GitHub:
 https://github.com/Achimobil/FS25_UndergroundStorage
 
 Changelog:
+1.0.2.3 - Ausgelagerte Paletten und Ballen können per Knopfdruck wieder eingelagert werden
 1.0.2.2 - Variante für Production Revamp als Silo wie im 22er
 1.0.2.1 - Das einlagern von Baumwollballen verhindert, da diese zu groß sind zum Auslagern und Infotrigger vergrößert
 
@@ -68,6 +69,10 @@ Changelog:
         <text name="storeItem_undergroundPalletSilo">
             <en>Underground Pallet Silo</en>
             <de>Unterirdisches Palettensilo</de>
+        </text>
+        <text name="action_storeObjects">
+            <en>Store objects</en>
+            <de>Objekte einlagern</de>
         </text>
     </l10n>
 

@@ -102,10 +102,21 @@
                     <keyFrame time="0.4" translation="1.505 -1.25 -1.76"  rotation="0 -90 0"/>
                 </part>
             </animation>
-            <controls triggerNode="aufzugTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate"/>
+            <controls triggerNode="aufzugTrigger"   posAction="ACTIVATE_HANDTOOL" posText="action_openGate"     negText="action_closeGate"/>
             <sounds>
                 <moving file="$data/sounds/doors/doorLelyVectorLoop_01.ogg" loops="0" outerRadius="20" innerRadius="6" fadeOut="0.25"/>
             </sounds>
+        </animatedObject>
+        <animatedObject saveId="einlagern">
+            <animation duration="6">
+                <part node="objectTrigger">
+                    <keyFrame time="0.0" translation="5.2 2.00003 0"  rotation="0 0 0"/>
+                    <keyFrame time="0.1" translation="-5.2 2.00003 0" rotation="0 0 0"/>
+                    <keyFrame time="0.9" translation="-5.2 2.00003 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="5.2 2.00003 0"  rotation="0 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="einlagerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_storeObjects" negText="action_storeObjects"/>
         </animatedObject>
     </animatedObjects>
 
@@ -128,7 +139,8 @@
         <i3dMapping id="playerTrigger" node="0>0|2"/>
         <i3dMapping id="playerTriggerMarker" node="0>0|2|0"/>
         <i3dMapping id="objectTrigger" node="0>0|3"/>
-        <i3dMapping id="objectTriggerMarker" node="0>0|3|0"/>
+        <i3dMapping id="objectTriggerMarker" node="0>0|4"/>
+        <i3dMapping id="einlagerTrigger" node="0>0|5"/>
 
         <i3dMapping id="clearArea1Start" node="0>1|0"/>
         <i3dMapping id="clearArea1Width" node="0>1|0|0"/>
