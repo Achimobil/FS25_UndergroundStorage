@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <placeable type="objectStorage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
     <storeData>
-        <name>$l10n_storeItem_objectStorage</name>
+        <name>$l10n_storeItem_undergroundStorage</name>
         <functions>
-            <function>$l10n_function_objectStorage</function>
+            <function>$l10n_function_undergroundStorage</function>
         </functions>
         <image>store_smallUndergroundStorage.png</image>
         <price>25000</price>

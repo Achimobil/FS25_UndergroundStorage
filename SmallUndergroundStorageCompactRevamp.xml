@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeable type="FS25_0_ProductionRevamp.RevampSilo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_compactUndergroundStorageRevamp</name>
+        <functions>
+            <function>$l10n_function_compactUndergroundStorageRevamp</function>
+        </functions>
+        <image>store_compactUndergroundStorage.png</image>
+        <price>15000</price>
+        <dailyUpkeep>120</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>silos</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>silos</tab>
+        </brush>
+    </storeData>
+
+    <base>
+        <filename>models/SmallUndergroundStorageCompact.i3d</filename>
+        <buysFarmland priceScale="1">false</buysFarmland>
+        <canBeDeleted>true</canBeDeleted>
+        <boughtWithFarmland>true</boughtWithFarmland>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+    </tipOcclusionUpdateAreas>
+
+    <placement>
+        <testAreas>
+            <testArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+        </testAreas>
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <hotspots>
+        <hotspot type="UNLOADING" linkNode="playerTriggerMarker" teleportNode="playerTriggerMarker"/>
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes01Start"                                                            adjustToGround="false"/>
+        <triggerMarker node="warningStripes02Start"                                                            adjustToGround="false"/>
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIconLoad.i3d"   adjustToGround="true"/>
+        <triggerMarker node="objectTriggerMarker"   filename="$data/shared/assets/marker/markerIconUnload.i3d" adjustToGround="true"/>
+    </triggerMarkers>
+
+    <animatedObjects>
+        <animatedObject saveId="einlagern">
+            <animation duration="6">
+                <part node="palletTrigger">
+                    <keyFrame time="0.0" translation="5.2 2 0"        rotation="0 0 0"/>
+                    <keyFrame time="0.1" translation="-5.2 2 0"       rotation="0 0 0"/>
+                    <keyFrame time="0.9" translation="-5.2 2 0"       rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="5.2 2 0"        rotation="0 0 0"/>
+                </part>
+                <part node="objectTrigger">
+                    <keyFrame time="0.0" translation="5.2 2.00003 0"  rotation="0 0 0"/>
+                    <keyFrame time="0.1" translation="-5.2 2.00003 0" rotation="0 0 0"/>
+                    <keyFrame time="0.9" translation="-5.2 2.00003 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="5.2 2.00003 0"  rotation="0 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="einlagerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_storeObjects" negText="action_storeObjects"/>
+        </animatedObject>
+    </animatedObjects>
+
+    <silo>
+        <!-- Verladestation ohne Trigger, nur für die Anzeige am Gebäude: der Info-Kasten liest seine Werte über die Verladestation,
+             und die nimmt das Lager nur dann als Quelle an, wenn sie dessen Fülltypen kennt -->
+        <loadingStation fillTypeCategories="PRODUCT SELLINGSTATION_BALES" storageRadius="0"/>
+
+        <unloadingStation>
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypeCategories="PRODUCT SELLINGSTATION_BALES" aiNode="aiUnloadingNode"/>
+            <baleTrigger triggerNode="objectTrigger" fillTypeCategories="SELLINGSTATION_BALES"/>
+            <palletTrigger triggerNode="palletTrigger" fillTypeCategories="PRODUCT"/>
+        </unloadingStation>
+
+        <storages>
+            <storage fillTypeCategories="PRODUCT SELLINGSTATION_BALES" capacity="200000000"/>
+        </storages>
+    </silo>
+
+    <revampObjectFillLevels>
+        <revampObjectFillLevel rootNode="siloDeko" fillTypeCategories="PRODUCT" maxAtFillLevel="2000000"/>
+    </revampObjectFillLevels>
+
+    <revampSpawner triggerNode="playerTrigger">
+        <palletSpawner>
+            <spawnPlaces>
+                <spawnPlace startNode="spawnPlace4Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace5Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace6Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace7Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace8Start" maxHeight="4" palletRotationOffset="90"/>
+                <spawnPlace startNode="spawnPlace9Start" maxHeight="4" palletRotationOffset="90"/>
+            </spawnPlaces>
+        </palletSpawner>
+    </revampSpawner>
+
+    <i3dMappings>        
+        <i3dMapping id="playerTrigger" node="0>0|2"/>
+        <i3dMapping id="playerTriggerMarker" node="0>0|2|0"/>
+        <i3dMapping id="objectTrigger" node="0>0|3"/>
+        <i3dMapping id="objectTriggerMarker" node="0>0|4"/>
+        <i3dMapping id="einlagerTrigger" node="0>0|5"/>
+
+        <i3dMapping id="clearArea1Start" node="0>1|0"/>
+        <i3dMapping id="clearArea1Width" node="0>1|0|0"/>
+        <i3dMapping id="clearArea1Height" node="0>1|0|1"/>
+
+        <i3dMapping id="levelArea1Start" node="0>2|0"/>
+        <i3dMapping id="levelArea1Width" node="0>2|0|0"/>
+        <i3dMapping id="levelArea1Height" node="0>2|0|1"/>
+
+        <i3dMapping id="infoTrigger" node="0>3"/>
+
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0"/>
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0"/>
+
+        <i3dMapping id="warningStripes01Start" node="0>5|0"/>
+        <i3dMapping id="warningStripes02Start" node="0>5|1"/>
+
+        <i3dMapping id="indoorArea1Start" node="0>8|0"/>
+        <i3dMapping id="indoorArea1Width" node="0>8|0|0"/>
+        <i3dMapping id="indoorArea1Height" node="0>8|0|1"/>
+
+        <i3dMapping id="exactFillRootNode" node="0>9|0|0"/>
+        <i3dMapping id="aiUnloadingNode" node="0>9|0|1"/>
+        <i3dMapping id="palletTrigger" node="0>9|0|2"/>
+        <i3dMapping id="siloDeko" node="0>9|2"/>
+
+        <i3dMapping id="spawnPlace4Start" node="0>9|1|0"/>
+        <i3dMapping id="spawnPlace5Start" node="0>9|1|1"/>
+        <i3dMapping id="spawnPlace6Start" node="0>9|1|2"/>
+        <i3dMapping id="spawnPlace7Start" node="0>9|1|3"/>
+        <i3dMapping id="spawnPlace8Start" node="0>9|1|4"/>
+        <i3dMapping id="spawnPlace9Start" node="0>9|1|5"/>
+    </i3dMappings>
+</placeable>

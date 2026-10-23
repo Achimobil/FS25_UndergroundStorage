@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="113">
+<modDesc descVersion="115">
     <author>Achimobil</author>
-    <version>1.0.2.3</version>
+    <version>1.0.2.4</version>
 
     <title>
         <en>Underground Storage</en>
@@ -13,15 +13,21 @@
     <description>
         <de><![CDATA[Kleiner Zugangsbereich zum unterirdischen Lager für Paletten und Ballen.
 
-Es handelt sich um ein standard Objekt Lager.
-Alle Ballen und Paletten können hier eingelagert werden.
-Silage Ballen gären weiter.
-Der Aufzug muss manuall bedient werden, da Objektlager keine Animationen können.
+Es gibt zwei Varianten:
+- Unterirdisches Lager mit Aufzug
+- Kompaktes Unterirdisches Lager ohne Aufzug, nur so lang wie der Zaun
+
+Beide sind Objektlager. Alle Ballen und Paletten können hier eingelagert werden, Silageballen gären weiter.
+Der Aufzug muss manuell bedient werden, da Objektlager keine Animationen können.
+Ausgelagerte Paletten und Ballen können per Knopfdruck „Objekte einlagern“ wieder eingelagert werden.
+
+Mit Production Revamp gibt es beide Varianten zusätzlich als Silo, das Ballen und Paletten als Füllstand lagert.
 
 Shopkategorie: Getreidesilos
-Preis: 25.000€
+Preis: 25.000€, kompakt 15.000€
 Täglicher Unterhalt: 120€
 Kapazität: 200.000 Ballen und Paletten
+Kapazität als Revamp-Silo: 200.000.000 l
 
 Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
 Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
@@ -30,6 +36,7 @@ Fehler und Anregungen gerne auf GitHub:
 https://github.com/Achimobil/FS25_UndergroundStorage
 
 Changelog:
+1.0.2.4 - Kompaktes Unterirdisches Lager ohne Aufzug ergänzt
 1.0.2.3 - Ausgelagerte Paletten und Ballen können per Knopfdruck wieder eingelagert werden
 1.0.2.2 - Variante für Production Revamp als Silo wie im 22er
 1.0.2.1 - Das einlagern von Baumwollballen verhindert, da diese zu groß sind zum Auslagern und Infotrigger vergrößert
@@ -41,15 +48,21 @@ Changelog:
 ]]></de>
         <en><![CDATA[Small access area to the underground storage facility for pallets and bales.
 
-This is a standard storage facility.
-All bales and pallets can be stored here.
-Silage bales continue to ferment.
+There are two variants:
+- Underground Storage with elevator
+- Compact Underground Storage without elevator, only as long as the fence
+
+Both are object storages. All bales and pallets can be stored here, silage bales continue to ferment.
 The elevator must be operated manually, as object storage cannot be animated.
+Spawned pallets and bales can be put back into storage with the "Store objects" button.
+
+With Production Revamp, both variants are also available as a silo that stores bales and pallets as fill level.
 
 Category: Grain silos
-Price: $25,000
+Price: $25,000, compact $15,000
 Daily upkeep: $120
 Capacity: 200,000 bales and pallets
+Capacity as Revamp silo: 200,000,000 l
 
 Uploading to sites other than ModHub is prohibited and therefore illegal. Only link to the original download link. NO substitute links!
 Modifying or re-uploading, whether in whole or in part, is not permitted!
@@ -66,9 +79,37 @@ Changelog:
     </description>
 
     <l10n>
-        <text name="storeItem_undergroundPalletSilo">
-            <en>Underground Pallet Silo</en>
-            <de>Unterirdisches Palettensilo</de>
+        <text name="storeItem_undergroundStorage">
+            <en>Underground Storage</en>
+            <de>Unterirdisches Lager</de>
+        </text>
+        <text name="storeItem_undergroundStorageRevamp">
+            <en>Underground Storage Revamp</en>
+            <de>Unterirdisches Lager Revamp</de>
+        </text>
+        <text name="storeItem_compactUndergroundStorage">
+            <en>Compact Underground Storage</en>
+            <de>Kompaktes Unterirdisches Lager</de>
+        </text>
+        <text name="storeItem_compactUndergroundStorageRevamp">
+            <en>Compact Underground Storage Revamp</en>
+            <de>Kompaktes Unterirdisches Lager Revamp</de>
+        </text>
+        <text name="function_undergroundStorage">
+            <en>Underground object storage for bales and pallets. The elevator is operated manually.</en>
+            <de>Unterirdisches Objektlager für Ballen und Paletten. Der Aufzug wird von Hand bedient.</de>
+        </text>
+        <text name="function_undergroundStorageRevamp">
+            <en>Stores bales and pallets as fill level like a silo. The elevator is operated manually.</en>
+            <de>Lagert Ballen und Paletten als Füllstand wie ein Silo. Der Aufzug wird von Hand bedient.</de>
+        </text>
+        <text name="function_compactUndergroundStorage">
+            <en>Compact underground object storage for bales and pallets, without elevator.</en>
+            <de>Kompaktes unterirdisches Objektlager für Ballen und Paletten, ohne Aufzug.</de>
+        </text>
+        <text name="function_compactUndergroundStorageRevamp">
+            <en>Stores bales and pallets as fill level like a silo, without elevator.</en>
+            <de>Lagert Ballen und Paletten als Füllstand wie ein Silo, ohne Aufzug.</de>
         </text>
         <text name="action_storeObjects">
             <en>Store objects</en>
@@ -82,5 +123,6 @@ Changelog:
 
     <storeItems>
         <storeItem xmlFilename="SmallUndergroundStorage.xml"/>
+        <storeItem xmlFilename="SmallUndergroundStorageCompact.xml"/>
     </storeItems>
 </modDesc>
